@@ -3198,6 +3198,12 @@
               "type": "string",
               "format": "date"
             },
+            "supplierAreasOfAvailability": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "custom": {
               "type": "object"
             }
@@ -3564,6 +3570,12 @@
           "requirePasswordChange": {
             "description": "Whether to require the user to change their password next time they login. This field is ignored on creation (as a password reset email will be sent). This field is ignored when single sign on is enabled. This field is ignored if the 'sendPasswordReset' field is present and set to true. Otherwise if this field is present and set to true then the user will have to change their password the next time they login.",
             "type": "boolean"
+          },
+          "supervisorPrivilegeExternalId": {
+            "description": "The user's Supervisor Privilege identified by its unique customer defined external ID",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
           },
           "maskedOrgUnitExternalId": {
             "description": "The unique identifier for the customers Organisation Unit that they want to set as the upper limit of the Organisation Hierarchy that the user can see. The default org unit will be set to the masked parent if the supplied default org unit is not in the hierarchical structure of the masked parent.",
