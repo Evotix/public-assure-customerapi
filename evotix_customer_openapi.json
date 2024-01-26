@@ -720,6 +720,46 @@
         ]
       }
     },
+    "/export/dataset/safe-unsafe/iq": {
+      "get": {
+        "description": "Retrieve the most recent IQ answers for this dataset. This API is only intended to be used to extract the dataset export when it has been refreshed (either daily or monthly as configured). It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is be be visualised/processed. Note that exports are only available in the preconfigured format (JSON-lines or CSV).",
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetIqGETResponse"
+                }
+              },
+              "application/jsonlines": {},
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/export/dataset/fire-risk": {
       "get": {
         "description": "Retrieve the most recent Fire Risk dataset export in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed (either daily or monthly as configured). It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is be be visualised/processed. Note that exports are only available in the preconfigured format (JSON or CSV).",
@@ -759,7 +799,7 @@
         ]
       }
     },
-    "/export/dataset/safe-unsafe/iq": {
+    "/export/dataset/fire-risk/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this dataset. This API is only intended to be used to extract the dataset export when it has been refreshed (either daily or monthly as configured). It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is be be visualised/processed. Note that exports are only available in the preconfigured format (JSON-lines or CSV).",
         "responses": {
@@ -957,6 +997,45 @@
         ]
       }
     },
+    "/export/dataset/action": {
+      "get": {
+        "description": "Retrieve the most recent Action dataset export in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed (either daily or monthly as configured). It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is be be visualised/processed. Note that exports are only available in the preconfigured format (JSON or CSV).",
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of the Action dataset export. Contents are array of Action records",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetActionGETResponse"
+                }
+              },
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/user": {
       "post": {
         "description": "Create/update a user using the provided details. If a user with matching 'username' already exists then they will be updated. If the user with matching 'username' is deactivated then they will be reactivated. The 'email' address must be unique, specifying a duplicate 'email' will result in an HTTP error 409.",
@@ -1015,6 +1094,82 @@
         "responses": {
           "200": {
             "description": "200 response - Successfully disabled the user (note this will also be the response if specified User is already disabled or did not exist)."
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/org-unit": {
+      "post": {
+        "description": "Create/update an organisational unit using the provided details. If an organisational unit with the provided 'externalId' already exists then that organisational unit will be updated. If the organisational unit with matching 'externalId' is deactivated then the organisational unit will be reactivated.",
+        "requestBody": {
+          "description": "Organisational unit details",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/orgUnitPOSTRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "200 response - Successful creation or update of the organisational unit."
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/org-unit/{externalId}": {
+      "delete": {
+        "description": "Disable the specified organisational unit in the URL path. This means that the specified organisational unit is not enabled. However, it does not delete the organisational unit entirely as this can only be done manually via the UI.",
+        "parameters": [
+          {
+            "description": "The unique external id of the organisational unit.",
+            "name": "externalId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successfully disabled the organisational unit (note this will also be the response if specified organisational unit is already disabled or did not exist)."
           },
           "400": {
             "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
@@ -2972,6 +3127,9 @@
               "type": "string",
               "format": "date"
             },
+            "fireRiskOfficer": {
+              "type": "string"
+            },
             "fireRiskResponsiblePerson": {
               "type": "string"
             },
@@ -3283,6 +3441,123 @@
           }
         }
       },
+      "exportDatasetActionGETResponse": {
+        "type": "array",
+        "description": "To ensure forwards compatibility responses do NOT set additionalProperties=false and do NOT use required fields",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "recordId": {
+              "type": "string"
+            },
+            "actionOrgUnitName": {
+              "type": "string"
+            },
+            "actionOrgUnitId": {
+              "type": "integer"
+            },
+            "actionOrgUnitExternalId": {
+              "type": "string"
+            },
+            "actionModule": {
+              "type": "string"
+            },
+            "actionSubmodule": {
+              "type": "string"
+            },
+            "iqTemplateName": {
+              "type": "string"
+            },
+            "iqTemplateType": {
+              "type": "string"
+            },
+            "iqTemplateMajorVersion": {
+              "type": "integer"
+            },
+            "actionType": {
+              "type": "string"
+            },
+            "actionHeader": {
+              "type": "string"
+            },
+            "actionDetail": {
+              "type": "string"
+            },
+            "actionDueDate": {
+              "type": "string"
+            },
+            "actionOriginalDueDate": {
+              "type": "string"
+            },
+            "actionIsArchive": {
+              "type": "boolean"
+            },
+            "actionIsApproved": {
+              "type": "boolean"
+            },
+            "actionIsComplete": {
+              "type": "boolean"
+            },
+            "actionCompletePercent": {
+              "type": "integer"
+            },
+            "actionCreatedAtUTC": {
+              "type": "string"
+            },
+            "actionModifiedAtUTC": {
+              "type": "string"
+            },
+            "actionCompletedAt": {
+              "type": "string"
+            },
+            "actionApprovedAt": {
+              "type": "string"
+            },
+            "actionRaisedByUser": {
+              "type": "string"
+            },
+            "actionRaisedForUser": {
+              "type": "string"
+            },
+            "actionCompletedByUser": {
+              "type": "string"
+            },
+            "actionApprovedByUser": {
+              "type": "string"
+            },
+            "actionModifiedByUser": {
+              "type": "string"
+            },
+            "actionLastComment": {
+              "type": "string"
+            },
+            "actionLastCommentUsername": {
+              "type": "string"
+            },
+            "actionPriority": {
+              "type": "string"
+            },
+            "actionCategory": {
+              "type": "string"
+            },
+            "actionSubcategory": {
+              "type": "string"
+            },
+            "actionCurrentStatus": {
+              "type": "string"
+            },
+            "actionTimeTaken": {
+              "type": "integer"
+            },
+            "actionSource": {
+              "type": "string"
+            }
+          }
+        }
+      },
       "userPOSTRequest": {
         "type": "object",
         "additionalProperties": false,
@@ -3542,6 +3817,248 @@
             "type": "string",
             "minLength": 1,
             "maxLength": 255
+          }
+        }
+      },
+      "orgUnitPOSTRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "externalId",
+          "name"
+        ],
+        "properties": {
+          "externalId": {
+            "description": "Unique externalId for the organisational unit. Each organisational unit must have a unique externalId. If an organisational unit already exists with the supplied externalId the organisational unit with the matching externalId will be updated.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "name": {
+            "description": "The name of the organisational unit.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "details": {
+            "description": "Details of the organisational unit.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "parentExternalId": {
+            "description": "The externalId of the parent organisational unit. This field is required for all organisational units apart from the root organisation unit where it must be omitted. If this field is omitted for a non-root organisational unit you will receive a 400 response.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "incidentRegion": {
+            "description": "The Incident region of the organisational unit. If this field is omitted or is empty then the default incident region is NONE.",
+            "type": "string",
+            "enum": [
+              "NONE",
+              "OSHA",
+              "RIDDOR"
+            ]
+          },
+          "applyIncidentRegionToChildUnits": {
+            "description": "When updating an organisational unit this field specifies if the incident region should also apply to child units. During a create as an organisational unit has no children setting this field will not make any changes. If this field is omitted or is empty then the default is set to false.",
+            "type": "boolean"
+          },
+          "frequencyRateRecording": {
+            "description": "Whether an accident incident frequency rate should be created for this record. If this field is set to 'CREATE' a incident frequency rate record is created for this organisational unit and its child units that aren't excluded. If it is set to 'EXCLUDE', this organisational unit is excluded from all  incident frequency rate records. If it is set to 'INCLUDE', no incident frequency rate record is created specifically for this organisational unit but it will be included in parent records. If this field is omitted the default will be 'INCLUDE'.",
+            "type": "string",
+            "enum": [
+              "INCLUDE",
+              "CREATE",
+              "EXCLUDE"
+            ]
+          },
+          "defaultUsers": {
+            "description": "Default users for the organisational unit.",
+            "type": "object",
+            "properties": {
+              "assigneeUsername": {
+                "description": "The default assignee's username. If this field is omitted or is empty then there is no default assignee for the organisational unit.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 35
+              },
+              "approverUsername": {
+                "description": "The default approver's username. If this field is omitted or is empty then there is no default approver for the organisational unit.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 35
+              },
+              "reviewerUsername": {
+                "description": "The default reviewer's username. If this field is omitted or is empty then there is no default reviewer for the organisational unit.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 35
+              },
+              "notificationRecipientUsername": {
+                "description": "The default notification recipient's username. If this field is omitted or is empty then there is no default notification recipient for the organisational unit.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 35
+              },
+              "portalReminderRecipientUsername": {
+                "description": "The default portal reminder recipient's username. If this field is omitted or is empty then there is no default portal reminder recipient for the organisational unit.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 35
+              },
+              "autoActionRecipientUsername": {
+                "description": "The default automatic action recipient's username. If this field is omitted or is empty then there is no default auto action recipient for the organisational unit.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 35
+              },
+              "assureGoPlusActionRaisedByUsername": {
+                "description": "The default assureGO+ Action raised By's username. If this field is omitted or is empty then there is no default user assigned to assure go plus action raised by for the organisational unit.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 35
+              },
+              "assureGoPlusActionRecipientUsername": {
+                "description": "The default AssureGo+ action recipient's username. If this field is omitted or is empty then there is no default AssureGo+ action recipient for the organisational unit. ",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 35
+              },
+              "humanResourcesRecipientUsername": {
+                "description": "The default human resources recipient's username. If this field is omitted or is empty then there is no default human resources recipient for the organisational unit. ",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 35
+              },
+              "alternativeHumanResourcesRecipientUsername": {
+                "description": "The default alternative human resources recipient's username. If this field is omitted or is empty then there is no default alternative human resources recipient for the organisational unit. ",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 35
+              },
+              "moduleOverrides": {
+                "description": "Specifies if specific modules should have default users overriding the current defaults. If this field is omitted or is empty then there are no module overrides for this organisational unit.",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "module"
+                  ],
+                  "properties": {
+                    "module": {
+                      "description": "The module that will have default user overrides for the organisational unit.",
+                      "type": "string",
+                      "enum": [
+                        "project-risk",
+                        "activity-risk",
+                        "coshh",
+                        "msds",
+                        "ghs-sds",
+                        "dse",
+                        "manual-handling",
+                        "fire-risk",
+                        "noise",
+                        "hazard-spotting",
+                        "general-risk",
+                        "incident-event",
+                        "vehicle-incident",
+                        "investigation",
+                        "riddor",
+                        "claim",
+                        "incident-analysis",
+                        "incident-rate",
+                        "vehicle-register",
+                        "person",
+                        "employment",
+                        "course",
+                        "training",
+                        "tna",
+                        "tna-template",
+                        "health",
+                        "driving",
+                        "equipment",
+                        "equipment-maintenance",
+                        "equipment-issue",
+                        "lifting-equipment",
+                        "electrical-testing",
+                        "ppe",
+                        "behavioural",
+                        "safe-unsafe",
+                        "procedural",
+                        "notification-of-project",
+                        "pretender",
+                        "construction-phase",
+                        "hs-file",
+                        "supplier-contractor",
+                        "environmental",
+                        "air-emissions",
+                        "release-to-water",
+                        "land-contamination",
+                        "waste-transfer",
+                        "waste-material",
+                        "waste-handler",
+                        "project",
+                        "f2508",
+                        "f2508a",
+                        "policy",
+                        "aspect-impact",
+                        "aspect-impact-component",
+                        "aspect-impact-reporting",
+                        "coshh-activity",
+                        "osha-establishment",
+                        "osha301",
+                        "osha300a",
+                        "job-hazard-analysis",
+                        "covid19-management"
+                      ]
+                    },
+                    "applyToChildUnits": {
+                      "description": "Specifies if overrides should also apply to child units. If this field is omitted or is empty then the default is set to false.",
+                      "type": "boolean"
+                    },
+                    "assigneeUsername": {
+                      "description": "The default assignee's username. If this field is omitted or is empty then there will be no overriding assignee for the specified module in this organisational unit.",
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 35
+                    },
+                    "approverUsername": {
+                      "description": "The default approver's username. If this field is omitted or is empty then there will be no overriding approver for the specified module in this organisational unit.",
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 35
+                    },
+                    "reviewerUsername": {
+                      "description": "The default reviewer's username. If this field is omitted or is empty then there will be no overriding reviewer for the specified module in this organisational unit.",
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 35
+                    },
+                    "notificationRecipientUsername": {
+                      "description": "The notification recipient's username. If this field is omitted or is empty then there will be no overriding notification recipient for the specified module in this organisational unit.",
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 35
+                    },
+                    "portalReminderRecipientUsername": {
+                      "description": "The portal reminder recipient's username. If this field is omitted or is empty then there will be no overriding portal reminder recipient for the specified module in this organisational unit.",
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 35
+                    },
+                    "automaticActionRecipientUsername": {
+                      "description": "The automatic action recipient's username. If this field is omitted or is empty then there will be no overriding automatic action recipient for the specified module in this organisational unit.",
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 35
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
