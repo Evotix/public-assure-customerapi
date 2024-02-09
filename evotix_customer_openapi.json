@@ -1036,6 +1036,45 @@
         ]
       }
     },
+    "/export/dataset/approval": {
+      "get": {
+        "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetApprovalGETResponse"
+                }
+              },
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/export/dataset/project-risk": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
@@ -1076,6 +1115,282 @@
       }
     },
     "/export/dataset/project-risk/iq": {
+      "get": {
+        "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetIqGETResponse"
+                }
+              },
+              "application/jsonlines": {},
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/driving": {
+      "get": {
+        "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetDrivingGETResponse"
+                }
+              },
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/driving/iq": {
+      "get": {
+        "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetIqGETResponse"
+                }
+              },
+              "application/jsonlines": {},
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/activity-risk": {
+      "get": {
+        "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetActivityRiskGETResponse"
+                }
+              },
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/activity-risk/iq": {
+      "get": {
+        "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetIqGETResponse"
+                }
+              },
+              "application/jsonlines": {},
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/act-haz-con": {
+      "get": {
+        "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetActHazConGETResponse"
+                }
+              },
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/project": {
+      "get": {
+        "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetProjectGETResponse"
+                }
+              },
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/project/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
         "responses": {
@@ -1373,7 +1688,7 @@
               "type": "string"
             },
             "orgUnitId": {
-              "type": "integer"
+              "type": "string"
             },
             "orgUnitExternalId": {
               "type": "string"
@@ -1394,6 +1709,9 @@
               "type": "string"
             },
             "incidentLocality": {
+              "type": "string"
+            },
+            "projectRecordId": {
               "type": "string"
             },
             "incidentType": {
@@ -1842,7 +2160,7 @@
               "type": "string"
             },
             "orgUnitId": {
-              "type": "integer"
+              "type": "string"
             },
             "orgUnitExternalId": {
               "type": "string"
@@ -1863,6 +2181,9 @@
               "type": "string"
             },
             "incidentLocality": {
+              "type": "string"
+            },
+            "projectRecordId": {
               "type": "string"
             },
             "incidentType": {
@@ -2283,7 +2604,7 @@
               "type": "string"
             },
             "orgUnitId": {
-              "type": "integer"
+              "type": "string"
             },
             "orgUnitExternalId": {
               "type": "string"
@@ -2304,6 +2625,9 @@
               "type": "string"
             },
             "auditLocality": {
+              "type": "string"
+            },
+            "projectRecordId": {
               "type": "string"
             },
             "auditDate": {
@@ -2406,7 +2730,7 @@
               "type": "string"
             },
             "orgUnitId": {
-              "type": "integer"
+              "type": "string"
             },
             "orgUnitExternalId": {
               "type": "string"
@@ -2427,6 +2751,9 @@
               "type": "string"
             },
             "hazardLocality": {
+              "type": "string"
+            },
+            "projectRecordId": {
               "type": "string"
             },
             "hazardSpottedAt": {
@@ -2537,7 +2864,7 @@
               "type": "string"
             },
             "orgUnitId": {
-              "type": "integer"
+              "type": "string"
             },
             "orgUnitExternalId": {
               "type": "string"
@@ -2720,7 +3047,7 @@
               "type": "string"
             },
             "orgUnitId": {
-              "type": "integer"
+              "type": "string"
             },
             "orgUnitExternalId": {
               "type": "string"
@@ -2741,6 +3068,18 @@
               "type": "string"
             },
             "riskLocality": {
+              "type": "string"
+            },
+            "projectRecordId": {
+              "type": "string"
+            },
+            "projectRiskRecordId": {
+              "type": "string"
+            },
+            "riskDescription": {
+              "type": "string"
+            },
+            "riskConclusion": {
               "type": "string"
             },
             "riskAssessorName": {
@@ -2807,7 +3146,7 @@
               "type": "string"
             },
             "orgUnitId": {
-              "type": "integer"
+              "type": "string"
             },
             "orgUnitExternalId": {
               "type": "string"
@@ -2936,7 +3275,7 @@
               "type": "string"
             },
             "orgUnitId": {
-              "type": "integer"
+              "type": "string"
             },
             "orgUnitExternalId": {
               "type": "string"
@@ -3076,7 +3415,7 @@
               "type": "string"
             },
             "orgUnitId": {
-              "type": "integer"
+              "type": "string"
             },
             "orgUnitExternalId": {
               "type": "string"
@@ -3176,7 +3515,7 @@
               "type": "string"
             },
             "orgUnitId": {
-              "type": "integer"
+              "type": "string"
             },
             "orgUnitExternalId": {
               "type": "string"
@@ -3191,6 +3530,12 @@
               "type": "string"
             },
             "locality": {
+              "type": "string"
+            },
+            "projectRecordId": {
+              "type": "string"
+            },
+            "projectRiskRecordId": {
               "type": "string"
             },
             "approvedForPortal": {
@@ -3269,7 +3614,7 @@
               "type": "string"
             },
             "orgUnitId": {
-              "type": "integer"
+              "type": "string"
             },
             "orgUnitExternalId": {
               "type": "string"
@@ -3443,7 +3788,7 @@
               "type": "string"
             },
             "orgUnitId": {
-              "type": "integer"
+              "type": "string"
             },
             "orgUnitExternalId": {
               "type": "string"
@@ -3536,12 +3881,15 @@
               "type": "string"
             },
             "actionOrgUnitId": {
-              "type": "integer"
+              "type": "string"
             },
             "actionOrgUnitExternalId": {
               "type": "string"
             },
             "actionModule": {
+              "type": "string"
+            },
+            "actionModuleReference": {
               "type": "string"
             },
             "actionSubmodule": {
@@ -3566,10 +3914,12 @@
               "type": "string"
             },
             "actionDueDate": {
-              "type": "string"
+              "type": "string",
+              "format": "date"
             },
             "actionOriginalDueDate": {
-              "type": "string"
+              "type": "string",
+              "format": "date"
             },
             "actionIsArchive": {
               "type": "boolean"
@@ -3584,16 +3934,20 @@
               "type": "integer"
             },
             "actionCreatedAtUTC": {
-              "type": "string"
+              "type": "string",
+              "format": "date-time"
             },
             "actionModifiedAtUTC": {
-              "type": "string"
+              "type": "string",
+              "format": "date-time"
             },
             "actionCompletedAt": {
-              "type": "string"
+              "type": "string",
+              "format": "date-time"
             },
             "actionApprovedAt": {
-              "type": "string"
+              "type": "string",
+              "format": "date-time"
             },
             "actionRaisedByUser": {
               "type": "string"
@@ -3637,6 +3991,79 @@
           }
         }
       },
+      "exportDatasetApprovalGETResponse": {
+        "type": "array",
+        "description": "To ensure forwards compatibility responses do NOT set additionalProperties=false and do NOT use required fields",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "recordId": {
+              "type": "string"
+            },
+            "approvalOrgUnitName": {
+              "type": "string"
+            },
+            "approvalOrgUnitId": {
+              "type": "string"
+            },
+            "approvalOrgUnitExternalId": {
+              "type": "string"
+            },
+            "approvalModule": {
+              "type": "string"
+            },
+            "approvalModuleReference": {
+              "type": "string"
+            },
+            "approvalStage": {
+              "type": "string"
+            },
+            "approvalIsApproved": {
+              "type": "boolean"
+            },
+            "approvalCreatedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "approvalModifiedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "approvalStatusChangedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "approvalCurrentTask": {
+              "type": "boolean"
+            },
+            "approvalCreatedByUser": {
+              "type": "string"
+            },
+            "approvalApprovedByUser": {
+              "type": "string"
+            },
+            "approvalModifiedByUser": {
+              "type": "string"
+            },
+            "approvalAssignedToUser": {
+              "type": "string"
+            },
+            "approvalDesignatedApprover": {
+              "type": "string"
+            },
+            "approvalComment": {
+              "type": "string"
+            },
+            "approvalDueDate": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      },
       "exportDatasetProjectRiskGETResponse": {
         "type": "array",
         "description": "To ensure forwards compatibility responses do NOT set additionalProperties=false and do NOT use required fields",
@@ -3673,7 +4100,7 @@
               "type": "string"
             },
             "orgUnitId": {
-              "type": "integer"
+              "type": "string"
             },
             "orgUnitExternalId": {
               "type": "string"
@@ -3711,6 +4138,489 @@
             },
             "projectRiskConclusion": {
               "type": "string"
+            },
+            "custom": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "exportDatasetDrivingGETResponse": {
+        "type": "array",
+        "description": "To ensure forwards compatibility responses do NOT set additionalProperties=false and do NOT use required fields",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "createdAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "modifiedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "createdByUser": {
+              "type": "string"
+            },
+            "modifiedByUser": {
+              "type": "string"
+            },
+            "isConfidential": {
+              "type": "boolean"
+            },
+            "isArchive": {
+              "type": "boolean"
+            },
+            "entityReference": {
+              "type": "string"
+            },
+            "orgUnitName": {
+              "type": "string"
+            },
+            "orgUnitId": {
+              "type": "string"
+            },
+            "orgUnitExternalId": {
+              "type": "string"
+            },
+            "iqTemplateName": {
+              "type": "string"
+            },
+            "iqTemplateMajorVersion": {
+              "type": "integer"
+            },
+            "location": {
+              "type": "string"
+            },
+            "locality": {
+              "type": "string"
+            },
+            "drivingLicenceIssueNumber": {
+              "type": "string"
+            },
+            "drivingLicenceValidFrom": {
+              "type": "string",
+              "format": "date"
+            },
+            "drivingLicenceValidTo": {
+              "type": "string",
+              "format": "date"
+            },
+            "drivingLicenceType": {
+              "type": "string"
+            },
+            "drivingLicenceRequiredToDrive": {
+              "type": "boolean"
+            },
+            "drivingLicenceHasHGV": {
+              "type": "boolean"
+            },
+            "drivingLicenceHGVType": {
+              "type": "string"
+            },
+            "drivingLicenceHGVExpiryDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "drivingLicenceCategory": {
+              "type": "string"
+            },
+            "drivingLicenceGroup": {
+              "type": "string"
+            },
+            "drivingLicenceConvictions": {
+              "type": "string"
+            },
+            "drivingLicenceComments": {
+              "type": "string"
+            },
+            "personReference": {
+              "type": "string"
+            },
+            "personForename": {
+              "type": "string"
+            },
+            "personSurname": {
+              "type": "string"
+            },
+            "personBirthDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "personSex": {
+              "type": "string"
+            },
+            "personMaritalStatus": {
+              "type": "string"
+            },
+            "personShift": {
+              "type": "string"
+            },
+            "personOccupation": {
+              "type": "string"
+            },
+            "personAddress1": {
+              "type": "string"
+            },
+            "personAddress2": {
+              "type": "string"
+            },
+            "personAddress3": {
+              "type": "string"
+            },
+            "personAddressTown": {
+              "type": "string"
+            },
+            "personAddressCounty": {
+              "type": "string"
+            },
+            "personAddressPostcode": {
+              "type": "string"
+            },
+            "personPhoneNumber": {
+              "type": "string"
+            },
+            "custom": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "exportDatasetActivityRiskGETResponse": {
+        "type": "array",
+        "description": "To ensure forwards compatibility responses do NOT set additionalProperties=false and do NOT use required fields",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "createdAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "modifiedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "createdByUser": {
+              "type": "string"
+            },
+            "modifiedByUser": {
+              "type": "string"
+            },
+            "isConfidential": {
+              "type": "boolean"
+            },
+            "isArchive": {
+              "type": "boolean"
+            },
+            "entityReference": {
+              "type": "string"
+            },
+            "orgUnitName": {
+              "type": "string"
+            },
+            "orgUnitId": {
+              "type": "string"
+            },
+            "orgUnitExternalId": {
+              "type": "string"
+            },
+            "iqTemplateName": {
+              "type": "string"
+            },
+            "iqTemplateMajorVersion": {
+              "type": "integer"
+            },
+            "location": {
+              "type": "string"
+            },
+            "locality": {
+              "type": "string"
+            },
+            "projectRecordId": {
+              "type": "string"
+            },
+            "projectRiskRecordId": {
+              "type": "string"
+            },
+            "approvedForPortal": {
+              "type": "boolean"
+            },
+            "activityRiskCategory": {
+              "type": "string"
+            },
+            "activityRiskDescription": {
+              "type": "string"
+            },
+            "activityRiskAssessorReference": {
+              "type": "string"
+            },
+            "activityRiskAssessmentForename": {
+              "type": "string"
+            },
+            "activityRiskAssessmentSurname": {
+              "type": "string"
+            },
+            "activityRiskAssessmentTeam": {
+              "type": "string"
+            },
+            "activityRiskAssessmentDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "activityRiskActivityDescription": {
+              "type": "string"
+            },
+            "activityRiskNumberExposed": {
+              "type": "integer"
+            },
+            "activityRiskPeopleExposed": {
+              "type": "string"
+            },
+            "activityRiskOverallPotentialRisk": {
+              "type": "integer"
+            },
+            "activityRiskOverallResidualRisk": {
+              "type": "integer"
+            },
+            "activityRiskCostControlMeasures": {
+              "type": "number"
+            },
+            "activityRiskIsAcceptable": {
+              "type": "boolean"
+            },
+            "activityRiskConclusion": {
+              "type": "string"
+            },
+            "custom": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "exportDatasetActHazConGETResponse": {
+        "type": "array",
+        "description": "To ensure forwards compatibility responses do NOT set additionalProperties=false and do NOT use required fields",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "recordId": {
+              "type": "string"
+            },
+            "createdAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "modifiedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "modifiedByUser": {
+              "type": "string"
+            },
+            "hazardControlCategory": {
+              "type": "string"
+            },
+            "hazardControlPhrases": {
+              "type": "string"
+            },
+            "hazardControlWhoAtRisk": {
+              "type": "string"
+            },
+            "hazardControlHowAtRisk": {
+              "type": "string"
+            },
+            "hazardControlMeasures": {
+              "type": "string"
+            },
+            "hazardControlAdditionalMeasures": {
+              "type": "string"
+            },
+            "hazardControlOrderIndex": {
+              "type": "integer"
+            },
+            "hazardControlPotentialFactorCaption": {
+              "type": "string"
+            },
+            "hazardControlResidualFactorCaption": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "exportDatasetProjectGETResponse": {
+        "type": "array",
+        "description": "To ensure forwards compatibility responses do NOT set additionalProperties=false and do NOT use required fields",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "createdAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "modifiedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "createdByUser": {
+              "type": "string"
+            },
+            "modifiedByUser": {
+              "type": "string"
+            },
+            "isConfidential": {
+              "type": "boolean"
+            },
+            "isArchive": {
+              "type": "boolean"
+            },
+            "entityReference": {
+              "type": "string"
+            },
+            "orgUnitName": {
+              "type": "string"
+            },
+            "orgUnitId": {
+              "type": "string"
+            },
+            "orgUnitExternalId": {
+              "type": "string"
+            },
+            "iqTemplateName": {
+              "type": "string"
+            },
+            "iqTemplateMajorVersion": {
+              "type": "integer"
+            },
+            "location": {
+              "type": "string"
+            },
+            "locality": {
+              "type": "string"
+            },
+            "projectDescription": {
+              "type": "string"
+            },
+            "projectManager": {
+              "type": "string"
+            },
+            "projectStartDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "projectEndDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "projectEstimatedManHours": {
+              "type": "integer"
+            },
+            "projectDuration": {
+              "type": "integer"
+            },
+            "projectUPRN": {
+              "type": "string"
+            },
+            "projectPropertyIdentifier": {
+              "type": "string"
+            },
+            "projectAddress": {
+              "type": "string"
+            },
+            "projectPostcode": {
+              "type": "string"
+            },
+            "projectOwnership": {
+              "type": "string"
+            },
+            "projectTenure": {
+              "type": "string"
+            },
+            "projectNoOfFloors": {
+              "type": "integer"
+            },
+            "projectFloorArea": {
+              "type": "number"
+            },
+            "projectOccupancyCapacity": {
+              "type": "integer"
+            },
+            "projectBuildingType": {
+              "type": "string"
+            },
+            "projectField1Text50": {
+              "type": "string"
+            },
+            "projectField2Text50": {
+              "type": "string"
+            },
+            "projectField3Text50": {
+              "type": "string"
+            },
+            "projectField4TextMax": {
+              "type": "string"
+            },
+            "projectField5TextMax": {
+              "type": "string"
+            },
+            "projectField6TextMax": {
+              "type": "string"
+            },
+            "projectField7Date": {
+              "type": "string",
+              "format": "date"
+            },
+            "projectField8Date": {
+              "type": "string",
+              "format": "date"
+            },
+            "projectField9Date": {
+              "type": "string",
+              "format": "date"
+            },
+            "projectField10Integer": {
+              "type": "integer"
+            },
+            "projectField11Integer": {
+              "type": "integer"
+            },
+            "projectField12Integer": {
+              "type": "integer"
+            },
+            "projectField13Decimal": {
+              "type": "number"
+            },
+            "projectField14Decimal": {
+              "type": "number"
+            },
+            "projectField15Decimal": {
+              "type": "number"
+            },
+            "projectField16Dictionary": {
+              "type": "string"
+            },
+            "projectField17Dictionary": {
+              "type": "string"
+            },
+            "projectField18Dictionary": {
+              "type": "string"
+            },
+            "geoLatitude": {
+              "type": "number"
+            },
+            "geoLongitude": {
+              "type": "number"
             },
             "custom": {
               "type": "object"
