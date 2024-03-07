@@ -2375,13 +2375,19 @@
             "responsiblePartyWhy": {
               "type": "string"
             },
-            "vehicleType": {
+            "vehicleRegisterRecordId": {
+              "type": "string"
+            },
+            "vehicleRegisterReference": {
               "type": "string"
             },
             "vehicleRegistrationPlate": {
               "type": "string"
             },
             "vehicleInsuranceRef": {
+              "type": "string"
+            },
+            "vehicleType": {
               "type": "string"
             },
             "vehicleMake": {
@@ -2421,6 +2427,9 @@
             "vehicleServicedDate": {
               "type": "string",
               "format": "date"
+            },
+            "vehicleRegisterOrgUnitName": {
+              "type": "string"
             },
             "vehicleUnattended": {
               "type": "boolean"
