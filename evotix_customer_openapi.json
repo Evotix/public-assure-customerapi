@@ -6579,6 +6579,21 @@
             "thirdPartyName": {
               "type": "string"
             },
+            "thirdPartyAddress": {
+              "type": "string"
+            },
+            "thirdPartyTelephone": {
+              "type": "string"
+            },
+            "thirdPartyInsurers": {
+              "type": "string"
+            },
+            "thirdPartyPolicyNumber": {
+              "type": "string"
+            },
+            "thirdPartyIsDamageVehicle": {
+              "type": "boolean"
+            },
             "thirdPartyCarMake": {
               "type": "string"
             },
@@ -6588,17 +6603,8 @@
             "thirdPartyCarColour": {
               "type": "string"
             },
-            "thirdPartyVehicleDamageDetails": {
+            "thirdPartyCarRegistrationNumber": {
               "type": "string"
-            },
-            "thirdPartyTakenToHospital": {
-              "type": "integer"
-            },
-            "thirdPartyDetained": {
-              "type": "integer"
-            },
-            "thirdPartyIsDamageVehicle": {
-              "type": "boolean"
             },
             "thirdPartyIsSeatBeltsFitted": {
               "type": "boolean"
@@ -6606,17 +6612,62 @@
             "thirdPartyIsSeatBeltsInUse": {
               "type": "boolean"
             },
+            "thirdPartyVehicleDamageDetails": {
+              "type": "string"
+            },
             "thirdPartyDriver": {
               "type": "boolean"
             },
+            "thirdPartyDriverName": {
+              "type": "string"
+            },
+            "thirdPartyDriverAddress": {
+              "type": "string"
+            },
+            "thirdPartyDriverTelephone": {
+              "type": "string"
+            },
+            "thirdPartyOwner": {
+              "type": "boolean"
+            },
+            "thirdPartyOwnerName": {
+              "type": "string"
+            },
+            "thirdPartyOwnerAddress": {
+              "type": "string"
+            },
+            "thirdPartyOwnerTelephone": {
+              "type": "string"
+            },
+            "thirdPartyInjuryDetails": {
+              "type": "string"
+            },
+            "thirdPartyTakenToHospital": {
+              "type": "string"
+            },
+            "thirdPartyDetained": {
+              "type": "string"
+            },
             "thirdPartyIsDamageProperty": {
               "type": "boolean"
+            },
+            "thirdPartyPropertyDamageDetails": {
+              "type": "string"
+            },
+            "thirdPartyAdditionalInformation": {
+              "type": "string"
             },
             "thirdPartyCategory": {
               "type": "string"
             },
             "thirdPartyPersonCategory": {
               "type": "string"
+            },
+            "thirdPartyOrderIndex": {
+              "type": "integer"
+            },
+            "thirdPartyIsInjuryOccurred": {
+              "type": "boolean"
             }
           }
         }
