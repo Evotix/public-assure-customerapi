@@ -3083,6 +3083,170 @@
         ]
       }
     },
+    "/incident-analysis": {
+      "post": {
+        "description": "Create/update a incident analysis record. If a incident analysis record with the provided 'reference' already exists then that incident analysis record with the existing 'reference' is updated.",
+        "requestBody": {
+          "description": "Incident analysis details",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/incidentAnalysisPOSTRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "200 response - Successful creation or update of the incident analysis record."
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "409": {
+            "description": "409 response - Reference provided is not unique for Incident Analysis records."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/incident-analysis/{reference}": {
+      "delete": {
+        "description": "Deletes the incident analysis record specified by the unique reference in the URL path.",
+        "parameters": [
+          {
+            "description": "The unique reference of the incident analysis record.",
+            "name": "reference",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successfully deleted the incident analysis record (note this will also be the response if specified incident analysis record is already deleted or did not exist)."
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "409": {
+            "description": "409 response - Reference provided is not unique for incident analysis records."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/claim": {
+      "post": {
+        "description": "Create/update a claims management record. If a claims management record with the provided 'reference' already exists then that claims management record with the existing 'reference' is updated.",
+        "requestBody": {
+          "description": "Claims management details",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/claimPOSTRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "200 response - Successful creation or update of the claims management record."
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "409": {
+            "description": "409 response - Reference provided is not unique for claims management records."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/claim/{reference}": {
+      "delete": {
+        "description": "Deletes the claims management record specified by the unique reference in the URL path.",
+        "parameters": [
+          {
+            "description": "The unique reference of the claims management record.",
+            "name": "reference",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successfully deleted the claims management record (note this will also be the response if specified claims management record is already deleted or did not exist)."
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "409": {
+            "description": "409 response - Reference provided is not unique for claims management records."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/ping": {
       "get": {
         "description": "DIAGNOSTIC USE ONLY - Provides confirmation that the API is reachable and that the API key is valid. Usage of this resource is throttled to prevent misuse (do not use this as part of regular integration processes).",
@@ -3219,12 +3383,6 @@
               "type": "string"
             },
             "locality": {
-              "type": "string"
-            },
-            "incidentLocation": {
-              "type": "string"
-            },
-            "incidentLocality": {
               "type": "string"
             },
             "projectRecordId": {
@@ -3770,12 +3928,6 @@
               "type": "string"
             },
             "locality": {
-              "type": "string"
-            },
-            "incidentLocation": {
-              "type": "string"
-            },
-            "incidentLocality": {
               "type": "string"
             },
             "projectRecordId": {
@@ -4324,12 +4476,6 @@
             "locality": {
               "type": "string"
             },
-            "auditLocation": {
-              "type": "string"
-            },
-            "auditLocality": {
-              "type": "string"
-            },
             "projectRecordId": {
               "type": "string"
             },
@@ -4451,12 +4597,6 @@
               "type": "string"
             },
             "locality": {
-              "type": "string"
-            },
-            "hazardLocation": {
-              "type": "string"
-            },
-            "hazardLocality": {
               "type": "string"
             },
             "projectRecordId": {
@@ -4722,12 +4862,6 @@
             "locality": {
               "type": "string"
             },
-            "personLocation": {
-              "type": "string"
-            },
-            "personLocality": {
-              "type": "string"
-            },
             "projectRecordIds": {
               "type": "array",
               "items": {
@@ -4917,12 +5051,6 @@
             "locality": {
               "type": "string"
             },
-            "riskLocation": {
-              "type": "string"
-            },
-            "riskLocality": {
-              "type": "string"
-            },
             "projectRecordId": {
               "type": "string"
             },
@@ -5020,12 +5148,6 @@
               "type": "string"
             },
             "locality": {
-              "type": "string"
-            },
-            "trainingLocation": {
-              "type": "string"
-            },
-            "trainingLocality": {
               "type": "string"
             },
             "trainingRequiredBy": {
@@ -5167,12 +5289,6 @@
               "type": "string"
             },
             "locality": {
-              "type": "string"
-            },
-            "equipmentLocation": {
-              "type": "string"
-            },
-            "equipmentLocality": {
               "type": "string"
             },
             "projectRecordIds": {
@@ -9285,6 +9401,690 @@
                 "type": "string",
                 "minLength": 1,
                 "maxLength": 50
+              }
+            }
+          }
+        }
+      },
+      "incidentAnalysisPOSTRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "reference",
+          "orgUnitExternalId",
+          "dataInterval",
+          "numberOfManHoursWorked"
+        ],
+        "properties": {
+          "reference": {
+            "description": "A unique reference for the incident analysis record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "orgUnitExternalId": {
+            "description": "The Incident Analysis record's default organisation unit identified by its unique customer defined external ID.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "isConfidential": {
+            "description": "Specifies if the record should be marked as confidential. If this field is omitted or null then the default is set to false.",
+            "type": "boolean"
+          },
+          "dataInterval": {
+            "description": "The incident analysis record's Data Interval. This value must match a value defined in the picklist data dictionary for this field. If this field is omitted or null then there will be no data interval for this incident analysis record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "locality": {
+            "description": "The incident analysis record's Locality. This value must match a value defined in the picklist data dictionary for this field. If this field is omitted or null then there will be no locality for this incident analysis record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "analysisMonth": {
+            "description": "Specifies the analysis month of the incident analysis record",
+            "type": "string",
+            "enum": [
+              "JANUARY",
+              "FEBRUARY",
+              "MARCH",
+              "APRIL",
+              "MAY",
+              "JUNE",
+              "JULY",
+              "AUGUST",
+              "SEPTEMBER",
+              "OCTOBER",
+              "NOVEMBER",
+              "DECEMBER"
+            ]
+          },
+          "analysisYear": {
+            "description": "Specifies the analysis year of the incident analysis record",
+            "type": "integer"
+          },
+          "specifyInterval": {
+            "description": "The incident analysis records specific interval.",
+            "type": "object",
+            "properties": {
+              "fromDate": {
+                "description": "Specifies the incident analysis record's intervals from date. This value must be in the format YYYY-MM-DD. If you do not specify this field the from date will default to the first day of the month and year provided in the 'analysisMonth' and 'analysisYear' fields. If they are also not provided in these fields an error will be returned",
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 25
+              },
+              "toDate": {
+                "description": "Specifies the incident analysis record's intervals to date. This value must be in the format YYYY-MM-DD. If you do not specify this field the to date will default to the last day of the month and year provided in the 'analysisMonth' and 'analysisYear' fields. If they are also not provided in these fields an error will be returned",
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 25
+              }
+            }
+          },
+          "numberOfEmployees": {
+            "description": "Specifies the average number of employees for the Incident Analysis record.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1e+16,
+            "multipleOf": 0.01
+          },
+          "numberOfManHoursWorked": {
+            "description": "Specifies the number of man hours worked for the Incident Analysis record. If this value is omitted or null it will default to 0.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1e+16,
+            "multipleOf": 0.01
+          },
+          "OSHA300AReference": {
+            "description": "This links a OSHA300A record to this incident analysis record from the provided reference. If the reference provided is shared by multiple OSHA300A records then an error will be returned. If the 'Year Filing For' in the OSHA300A record is not the same year as the 'specifyInterval' field in this record an error will be returned. If this field is omitted or null then there will be no OSHA300A record linked to this Incident Analysis record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "lifetimeHours": {
+            "description": "Specifies the standard lifetime working hours for the Incident Analysis record.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1e+16,
+            "multipleOf": 0.01
+          },
+          "cascadeResults": {
+            "description": "Specifies if the incident analysis results should be assigned to the associated organisational unit and its child units.",
+            "type": "boolean"
+          },
+          "supplyAnalysis": {
+            "description": "This field will determine how the incident analysis object is filled out. 'NONE' will overwrite the field to have no details, 'MANUAL' will allow for manual input of the fields and 'AUTO-CALCULATE' will overwrite the fields with the automatic calculations.",
+            "type": "string",
+            "enum": [
+              "NONE",
+              "MANUAL",
+              "AUTO-CALCULATE"
+            ]
+          },
+          "incidentAnalysis": {
+            "description": "The incident analysis records specific interval.",
+            "type": "object",
+            "properties": {
+              "TotalLostTimeAccidents": {
+                "description": "Specifies the total number of lost time accidents for the Incident Analysis record.",
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1e+16,
+                "multipleOf": 0.01
+              },
+              "TotalReportableAccidents": {
+                "description": "Specifies the total number of reportable accidents for the Incident Analysis record.",
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1e+16,
+                "multipleOf": 0.01
+              },
+              "TotalAccidents": {
+                "description": "Specifies the total number of accidents for the Incident Analysis record.",
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1e+16,
+                "multipleOf": 0.01
+              },
+              "InjuryFrequencyRate": {
+                "description": "Specifies the number of all injury frequency rate for the Incident Analysis record.",
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1e+16,
+                "multipleOf": 0.01
+              },
+              "IncidenceRate": {
+                "description": "Specifies the incidence rate for the Incident Analysis record.",
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1e+16,
+                "multipleOf": 0.01
+              },
+              "IncidentRate": {
+                "description": "Specifies the incident rate for the Incident Analysis record.",
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1e+16,
+                "multipleOf": 0.01
+              }
+            }
+          }
+        }
+      },
+      "claimPOSTRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "reference",
+          "orgUnitExternalId",
+          "incidentDate"
+        ],
+        "properties": {
+          "reference": {
+            "description": "A unique reference for the claims management record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "orgUnitExternalId": {
+            "description": "The Claims Management record's default organisation unit identified by its unique customer defined external ID.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "isConfidential": {
+            "description": "Specifies if the record should be marked as confidential. If this field is omitted or null then the default is set to false.",
+            "type": "boolean"
+          },
+          "incidentReference": {
+            "description": "This links an Incident record to this claims management record from the provided reference. If the reference provided is shared by multiple Incident records then an error will be returned. If this field is omitted or null then there will be no incident reference linked to this claims management record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "vehicleIncidentReference": {
+            "description": "This links a Vehicle Incident record to this claims management record from the provided reference. If the reference provided is shared by multiple Vehicle Incident records then an error will be returned. If this field is omitted or null then there will be no vehicle incident reference linked to this claims management record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "typeOfClaim": {
+            "description": "The claims management record's type of claim. This value must match a value defined in the picklist data dictionary for this field. If this field is omitted or null then there will be no type of claim for this claims management record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "investigationDate": {
+            "description": "The claims management record's investigation date. This value must be in the format YYYY-MM-DD. If this field is omitted or null then there will be no investigation date for this claims management record.",
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 25
+          },
+          "incidentDate": {
+            "description": "The claims management record's incident date. This value must be in the format YYYY-MM-DD.",
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 25
+          },
+          "notificationDate": {
+            "description": "The claims management record's notification date. This value must be in the format YYYY-MM-DD. If this field is omitted or null then there will be no notification date for this claims management record.",
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 25
+          },
+          "description": {
+            "description": "The claims management record's description. If this field is omitted or null then there will be no description for this claims management record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "location": {
+            "description": "The claims management record's location. If this field is omitted or null then there will be no location for this claims management record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "locality": {
+            "description": "The claims management record's locality. This value must match a value defined in the picklist data dictionary for this field. If this field is omitted or null then there will be no locality for this claims management record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "natureOfIncident": {
+            "description": "The claims management record's nature of incident. This value must match a value defined in the picklist data dictionary for this field. If this field is omitted or null then there will be no nature of incident for this claims management record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "incidentDetails": {
+            "description": "The claims management record's incident details. If this field is omitted or null then there will be no incident details for this claims management record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100000
+          },
+          "manager": {
+            "description": "The claims management record's manager. If this field is omitted or null then there will be no manager for this claims management record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 250
+          },
+          "probability": {
+            "description": "The claims management record's probability. If this field is omitted or null then there will be no probability for this claims management record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30
+          },
+          "stageOfClaim": {
+            "description": "The claims management record's stage of claim. If this field is omitted or null then there will be no stage of claim for this claims management record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "currentPosition": {
+            "description": "The claims management record's current claim position. This value must match a value defined in the picklist data dictionary for this field. If this field is omitted or null then there will be no current position for this claims management record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "outcome": {
+            "description": "The claims management record's outcome. If this field is omitted or null then there will be no outcome for this claims management record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100000
+          },
+          "costCentre": {
+            "description": "The claims management record's cost centre. This value must match a value defined in the picklist data dictionary for this field. If this field is omitted or null then there will be no cost centre for this claims management record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "settlementDetails": {
+            "description": "The Settlement Details sub-section of the claims management record.",
+            "type": "object",
+            "properties": {
+              "interimPaymentDate": {
+                "description": "The claims management record's interim payment date. This value must be in the format YYYY-MM-DD. If this field is omitted or null then there will be no interim payment date for this claims management record.",
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 25
+              },
+              "settlementDate": {
+                "description": "The claims management record's settlement date. This value must be in the format YYYY-MM-DD. If this field is omitted or null then there will be no settlement date for this claims management record.",
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 25
+              },
+              "costs": {
+                "description": "The estimated and actual costs associated with the claim.",
+                "type": "object",
+                "properties": {
+                  "estimated": {
+                    "description": "The estimated costs associated with the claim. The values provided in this object will be used to calculate the total estimated costs for the claim.",
+                    "type": "object",
+                    "properties": {
+                      "initialReserve": {
+                        "description": "The initial reserve estimate. If the currentReserve field has a value this field will be non-editable. If this field is omitted or null then there will be no initial reserve estimate for this claims management record.",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1e+16,
+                        "multipleOf": 0.01
+                      },
+                      "currentReserve": {
+                        "description": "The current reserve estimate. If this field is omitted or null then there will be no current reserve estimate for this claims management record except if a value is entered into either of the following fields(plaintiff, defence, VAT or excess) then it will be 0.00.",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1e+16,
+                        "multipleOf": 0.01
+                      },
+                      "plaintiffCosts": {
+                        "description": "The plaintiff costs estimate. If this field is omitted or null then there will be no plaintiff costs estimate for this claims management record except if a value is entered into either of the following fields(currentReserve, defence, VAT or excess) then it will be 0.00.",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1e+16,
+                        "multipleOf": 0.01
+                      },
+                      "defenceCosts": {
+                        "description": "The defence costs estimate. If this field is omitted or null then there will be no defence costs estimate for this claims management record except if a value is entered into either of the following fields(currentReserve, plaintiff, VAT or excess) then it will be 0.00.",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1e+16,
+                        "multipleOf": 0.01
+                      },
+                      "vat": {
+                        "description": "The VAT estimate. If this field is omitted or null then there will be no VAT estimate for this claims management record except if a value is entered into either of the following fields(currentReserve, plaintiff, defence or excess) then it will be 0.00.",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1e+16,
+                        "multipleOf": 0.01
+                      },
+                      "excess": {
+                        "description": "The excess estimate. If this field is omitted or null then there will be no excess estimate for this claims management record except if a value is entered into either of the following fields(currentReserve, plaintiff, defence or VAT) then it will be 0.00.",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1e+16,
+                        "multipleOf": 0.01
+                      }
+                    }
+                  },
+                  "actual": {
+                    "description": "The actual costs associated with the claim. The values provided in this object will be used to calculate the total actual costs for the claim.",
+                    "type": "object",
+                    "properties": {
+                      "interimPayment": {
+                        "description": "The interim payment actual. If this field is omitted or null then there will be no interim payment actual for this claims management record except if a value is entered into either of the following fields(plaintiff, defence, VAT or excess) then it will be 0.00.",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1e+16,
+                        "multipleOf": 0.01
+                      },
+                      "plaintiffCosts": {
+                        "description": "The plaintiff costs actual. If this field is omitted or null then there will be no plaintiff costs actual for this claims management record except if a value is entered into either of the following fields(interimPayment, defence, VAT or excess) then it will be 0.00.",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1e+16,
+                        "multipleOf": 0.01
+                      },
+                      "defenceCosts": {
+                        "description": "The defence costs actual. If this field is omitted or null then there will be no defence costs actual for this claims management record except if a value is entered into either of the following fields(interimPayment, plaintiff, VAT or excess) then it will be 0.00.",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1e+16,
+                        "multipleOf": 0.01
+                      },
+                      "vat": {
+                        "description": "The VAT actual. If this field is omitted or null then there will be no VAT actual for this claims management record except if a value is entered into either of the following fields(interimPayment, plaintiff, defence or excess) then it will be 0.00.",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1e+16,
+                        "multipleOf": 0.01
+                      },
+                      "excess": {
+                        "description": "The excess actual. If this field is omitted or null then there will be no excess actual for this claims management record except if a value is entered into either of the following fields(interimPayment, plaintiff, defence or VAT) then it will be 0.00.",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1e+16,
+                        "multipleOf": 0.01
+                      }
+                    }
+                  }
+                }
+              },
+              "settlementComments": {
+                "description": "The claims management record's settlement comments. If this field is omitted or null then there will be no settlement comments for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100000
+              }
+            }
+          },
+          "interestedParties": {
+            "description": "The Interested Parties section.",
+            "type": "object",
+            "properties": {
+              "insurerReference": {
+                "description": "The claims management record's insurer reference. If this field is omitted or null then there will be no insurer reference for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 250
+              },
+              "insurerDetails": {
+                "description": "The claims management record's insurer details. If this field is omitted or null then there will be no insurer details for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100000
+              },
+              "brokerReference": {
+                "description": "The claims management record's broker reference. If this field is omitted or null then there will be no broker reference for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 250
+              },
+              "brokerDetails": {
+                "description": "The claims management record's broker details. If this field is omitted or null then there will be no broker details for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100000
+              },
+              "defenceSolicitor": {
+                "description": "The claims management record's defence solicitor/legal representative. If this field is omitted or null then there will be no defence solicitor for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100000
+              },
+              "lossAdjuster": {
+                "description": "The claims management record's loss adjuster/investigator. If this field is omitted or null then there will be no loss adjuster for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100000
+              },
+              "otherParties": {
+                "description": "The claims management record's names of other parties involved in the claim and proportionate share of costs. If this field is omitted or null then there will be no names of other parties involved in the claim and proportionate share of costs for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100000
+              }
+            }
+          },
+          "claimants": {
+            "description": "The Claimants section.",
+            "type": "object",
+            "properties": {
+              "surname": {
+                "description": "The claims management record's claimant's surname. If this field is omitted or null then there will be no claimant surname for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 50
+              },
+              "forename": {
+                "description": "The claims management record's claimant's forename. If this field is omitted or null then there will be no claimant forename for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 50
+              },
+              "address1": {
+                "description": "The claims management record's claimant's address line 1. If this field is omitted or null then there will be no claimant address line 1 for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "address2": {
+                "description": "The claims management record's claimant's address line 2. If this field is omitted or null then there will be no claimant address line 2 for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "address3": {
+                "description": "The claims management record's claimant's address line 3. If this field is omitted or null then there will be no claimant address line 3 for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "town": {
+                "description": "The claims management record's claimant's town. If this field is omitted or null then there will be no claimant town for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "county": {
+                "description": "The claims management record's claimant's county. If this field is omitted or null then there will be no claimant county for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "postcode": {
+                "description": "The claims management record's claimant's postcode. If this field is omitted or null then there will be no claimant postcode for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 10
+              },
+              "dateOfBirth": {
+                "description": "The claims management record's claimant's date of birth. This value must be in the format YYYY-MM-DD. If this field is omitted or null then there will be no claimant date of birth for this claims management record.",
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 25
+              },
+              "dateOfDeath": {
+                "description": "The claims management record's claimant's date of death. This value must be in the format YYYY-MM-DD. If this field is omitted or null then there will be no claimant date of death for this claims management record.",
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 25
+              },
+              "age": {
+                "description": "The claims management record's claimant's age. If this field is omitted or null then there will be no claimant age for this claims management record.",
+                "type": "integer"
+              },
+              "sex": {
+                "description": "The claims management record's claimant's sex. This value must match a value defined in the picklist data dictionary for this field. If this field is omitted or null then there will be no claimant sex for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 255
+              },
+              "occupation": {
+                "description": "The claims management record's claimant's occupation. This value must match a value defined in the picklist data dictionary for this field. If this field is omitted or null then there will be no claimant occupation for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 255
+              },
+              "shift": {
+                "description": "The claims management record's claimant's shift. This value must match a value defined in the picklist data dictionary for this field. If this field is omitted or null then there will be no claimant shift for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 255
+              },
+              "lostTimeDays": {
+                "description": "The claims management record's claimant's lost time days. If this field is omitted or null then there will be no claimant lost time days for this claims management record.",
+                "type": "integer"
+              },
+              "injuryType": {
+                "description": "The claims management record's claimant's injury type. This value must match a value defined in the picklist data dictionary for this field. If this field is omitted or null then there will be no claimant injury type for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 255
+              },
+              "apparentCause": {
+                "description": "The claims management record's claimant's apparent cause. This value must match a value defined in the picklist data dictionary for this field. If this field is omitted or null then there will be no claimant apparent cause for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 255
+              },
+              "partOfBodyAffected": {
+                "description": "The claims management record's claimant's part(s) of body affected. This value must match a value defined in the picklist data dictionary for this field. If this field is omitted or null then there will be no claimant part of body affected for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 255
+              },
+              "resultantDisabilityOrHarm": {
+                "description": "The claims management record's claimant's resultant disability or harm. If this field is omitted or null then there will be no claimant resultant disability or harm for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 75
+              },
+              "plaintiffName": {
+                "description": "The claims management record's claimant's plaintiff name. If this field is omitted or null then there will be no claimant plaintiff name for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 50
+              },
+              "plaintiffSolicitor": {
+                "description": "The claims management record's claimant's plaintiff solicitor. If this field is omitted or null then there will be no claimant plaintiff solicitor for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 50
+              }
+            }
+          },
+          "otherInformation": {
+            "description": "The Other Information section.",
+            "type": "object",
+            "properties": {
+              "defenceNature": {
+                "description": "The claims management record's nature of proposed defence. If this field is omitted or null then there will be no nature of proposed defence for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100000
+              },
+              "namesOfExpertWitnesses": {
+                "description": "The claims management record's names of expert witnesses. If this field is omitted or null then there will be no names of expert witnesses for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100000
+              },
+              "negligenceOrCausationAdvice": {
+                "description": "This sub-section contains expert advice obtained regarding negligence or causation.",
+                "type": "object",
+                "properties": {
+                  "isInternal": {
+                    "description": "Specifies if the expert advice obtained regarding negligence or causation is internal. If this field is omitted or null then the default is set to false.",
+                    "type": "boolean"
+                  },
+                  "isExternal": {
+                    "description": "Specifies if the expert advice obtained regarding negligence or causation is external. If this field is omitted or null then the default is set to false.",
+                    "type": "boolean"
+                  },
+                  "hasExchangedWitnessReports": {
+                    "description": "Specifies if the expert advice obtained regarding negligence or causation has exchanged witness reports. If this field is omitted or null then the default is set to false.",
+                    "type": "boolean"
+                  },
+                  "notes": {
+                    "description": "The claims management record's expert advice obtained regarding negligence or causation notes. If this field is omitted or null then there will be no expert advice obtained regarding negligence or causation notes for this claims management record.",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100000
+                  }
+                }
+              },
+              "quantumAdvice": {
+                "description": "This sub-section contains expert advice obtained regarding quantum.",
+                "type": "object",
+                "properties": {
+                  "isInternal": {
+                    "description": "Specifies if the expert advice obtained regarding quantum is internal. If this field is omitted or null then the default is set to false.",
+                    "type": "boolean"
+                  },
+                  "isExternal": {
+                    "description": "Specifies if the expert advice obtained regarding quantum is external. If this field is omitted or null then the default is set to false.",
+                    "type": "boolean"
+                  },
+                  "hasExchangedWitnessReports": {
+                    "description": "Specifies if the expert advice obtained regarding quantum has exchanged witness reports. If this field is omitted or null then the default is set to false.",
+                    "type": "boolean"
+                  },
+                  "notes": {
+                    "description": "The claims management record's expert advice obtained regarding quantum notes. If this field is omitted or null then there will be no expert advice obtained regarding quantum notes for this claims management record.",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100000
+                  }
+                }
+              },
+              "isComplaint": {
+                "description": "Specifies if the claimant has made a complaint. If this field is omitted or null then the default is set to false.",
+                "type": "boolean"
+              },
+              "numberOfPeopleInjured": {
+                "description": "Specifies the number of people injured.",
+                "type": "integer"
+              },
+              "isAlternativeDisputeResolution": {
+                "description": "Specifies if the claimant has used alternative form of dispute resolution. If this field is omitted or null then the default is set to false.",
+                "type": "boolean"
+              },
+              "alternativeResolution": {
+                "description": "The claims management record's alternative resolution. If isAlternativeDisputeResolution field is null or false any details provided for this field will not be assigned. If this field is omitted or null then there will be no alternative resolution for this claims management record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100000
+              },
+              "isStructuringFeasible": {
+                "description": "Specifies if structuring is feasible.",
+                "type": "boolean"
+              },
+              "isAcceptableToPlaintiff": {
+                "description": "Specifies if the settlement is acceptable to the plaintiff. If this field is omitted or null then the default is set to false.",
+                "type": "boolean"
               }
             }
           }
