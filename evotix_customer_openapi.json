@@ -2849,6 +2849,243 @@
         ]
       }
     },
+    "/export/dataset/notification-of-project": {
+      "get": {
+        "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetNotificationOfProjectGETResponse"
+                }
+              },
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/notification-of-project/iq": {
+      "get": {
+        "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetIqGETResponse"
+                }
+              },
+              "application/jsonlines": {},
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/electrical-testing": {
+      "get": {
+        "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetElectricalTestingGETResponse"
+                }
+              },
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/electrical-testing/iq": {
+      "get": {
+        "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetIqGETResponse"
+                }
+              },
+              "application/jsonlines": {},
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/lifting-equip": {
+      "get": {
+        "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetLiftingEquipGETResponse"
+                }
+              },
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/lifting-equip/iq": {
+      "get": {
+        "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetIqGETResponse"
+                }
+              },
+              "application/jsonlines": {},
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/user": {
       "post": {
         "description": "Create/update a user using the provided details. If a user with matching 'username' already exists then they will be updated. If the user with matching 'username' is deactivated then they will be reactivated. The 'email' address must be unique, specifying a duplicate 'email' will result in an HTTP error 409.",
@@ -8608,6 +8845,499 @@
             },
             "supplierContractorName": {
               "type": "string"
+            },
+            "custom": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "exportDatasetNotificationOfProjectGETResponse": {
+        "type": "array",
+        "description": "To ensure forwards compatibility responses do NOT set additionalProperties=false and do NOT use required fields",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "createdAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "modifiedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "createdByUser": {
+              "type": "string"
+            },
+            "modifiedByUser": {
+              "type": "string"
+            },
+            "isConfidential": {
+              "type": "boolean"
+            },
+            "isArchive": {
+              "type": "boolean"
+            },
+            "entityReference": {
+              "type": "string"
+            },
+            "orgUnitName": {
+              "type": "string"
+            },
+            "orgUnitId": {
+              "type": "string"
+            },
+            "orgUnitExternalId": {
+              "type": "string"
+            },
+            "iqTemplateName": {
+              "type": "string"
+            },
+            "iqTemplateMajorVersion": {
+              "type": "integer"
+            },
+            "location": {
+              "type": "string"
+            },
+            "locality": {
+              "type": "string"
+            },
+            "projectRecordId": {
+              "type": "string"
+            },
+            "projectReference": {
+              "type": "string"
+            },
+            "notificationOfProjectOption": {
+              "type": "string"
+            },
+            "notificationOfProjectForwardingDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "notificationOfProjectConstructionSiteAddress": {
+              "type": "string"
+            },
+            "notificationOfProjectLocalAuthorityName": {
+              "type": "string"
+            },
+            "notificationOfProjectProjectDescription": {
+              "type": "string"
+            },
+            "notificationOfProjectClientName": {
+              "type": "string"
+            },
+            "notificationOfProjectClientEmail": {
+              "type": "string"
+            },
+            "notificationOfProjectClientAddress": {
+              "type": "string"
+            },
+            "notificationOfProjectClientPostcode": {
+              "type": "string"
+            },
+            "notificationOfProjectClientTelephone": {
+              "type": "string"
+            },
+            "notificationOfProjectAdditionalClientDetails": {
+              "type": "string"
+            },
+            "notificationOfProjectDesignerName": {
+              "type": "string"
+            },
+            "notificationOfProjectDesignerEmail": {
+              "type": "string"
+            },
+            "notificationOfProjectDesignerAddress": {
+              "type": "string"
+            },
+            "notificationOfProjectDesignerPostcode": {
+              "type": "string"
+            },
+            "notificationOfProjectDesignerTelephone": {
+              "type": "string"
+            },
+            "notificationOfProjectAdditionalDesignerDetails": {
+              "type": "string"
+            },
+            "notificationOfProjectCoordinatorName": {
+              "type": "string"
+            },
+            "notificationOfProjectCoordinatorEmail": {
+              "type": "string"
+            },
+            "notificationOfProjectCoordinatorAddress": {
+              "type": "string"
+            },
+            "notificationOfProjectCoordinatorPostcode": {
+              "type": "string"
+            },
+            "notificationOfProjectCoordinatorTelephone": {
+              "type": "string"
+            },
+            "supplierContractorPrincipalRecordId": {
+              "type": "string"
+            },
+            "supplierContractorPrincipalReference": {
+              "type": "string"
+            },
+            "supplierContractorPrincipalName": {
+              "type": "string"
+            },
+            "supplierContractorPrincipalAddress1": {
+              "type": "string"
+            },
+            "supplierContractorPrincipalAddress2": {
+              "type": "string"
+            },
+            "supplierContractorPrincipalAddress3": {
+              "type": "string"
+            },
+            "supplierContractorPrincipalTown": {
+              "type": "string"
+            },
+            "supplierContractorPrincipalCounty": {
+              "type": "string"
+            },
+            "supplierContractorPrincipalPostcode": {
+              "type": "string"
+            },
+            "supplierContractorPrincipalTelephone": {
+              "type": "string"
+            },
+            "supplierContractorPrincipalEmail": {
+              "type": "string"
+            },
+            "supplierContractorPrincipalStatus": {
+              "type": "string"
+            },
+            "supplierContractorPrincipalStatusRating": {
+              "type": "string"
+            },
+            "notificationOfProjectTimeAllowed": {
+              "type": "string"
+            },
+            "notificationOfProjectTimescale": {
+              "type": "string"
+            },
+            "notificationOfProjectPlannedStartDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "notificationOfProjectPlannedDuration": {
+              "type": "string"
+            },
+            "notificationOfProjectNumberPeople": {
+              "type": "integer"
+            },
+            "notificationOfProjectNumberContractors": {
+              "type": "integer"
+            },
+            "supplierContractorAppointedRecordId": {
+              "type": "string"
+            },
+            "supplierContractorAppointedReference": {
+              "type": "string"
+            },
+            "supplierContractorAppointedName": {
+              "type": "string"
+            },
+            "supplierContractorAppointedAddress1": {
+              "type": "string"
+            },
+            "supplierContractorAppointedAddress2": {
+              "type": "string"
+            },
+            "supplierContractorAppointedAddress3": {
+              "type": "string"
+            },
+            "supplierContractorAppointedTown": {
+              "type": "string"
+            },
+            "supplierContractorAppointedCounty": {
+              "type": "string"
+            },
+            "supplierContractorAppointedPostcode": {
+              "type": "string"
+            },
+            "supplierContractorAppointedTelephone": {
+              "type": "string"
+            },
+            "supplierContractorAppointedEmail": {
+              "type": "string"
+            },
+            "supplierContractorAppointedStatus": {
+              "type": "string"
+            },
+            "supplierContractorAppointedStatusRating": {
+              "type": "string"
+            },
+            "notificationOfProjectAppointedContractorDetails": {
+              "type": "string"
+            },
+            "notificationOfProjectDeclarationName": {
+              "type": "string"
+            },
+            "notificationOfProjectDeclarationDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "custom": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "exportDatasetElectricalTestingGETResponse": {
+        "type": "array",
+        "description": "To ensure forwards compatibility responses do NOT set additionalProperties=false and do NOT use required fields",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "createdAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "modifiedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "createdByUser": {
+              "type": "string"
+            },
+            "modifiedByUser": {
+              "type": "string"
+            },
+            "isConfidential": {
+              "type": "boolean"
+            },
+            "isArchive": {
+              "type": "boolean"
+            },
+            "entityReference": {
+              "type": "string"
+            },
+            "orgUnitName": {
+              "type": "string"
+            },
+            "orgUnitId": {
+              "type": "string"
+            },
+            "orgUnitExternalId": {
+              "type": "string"
+            },
+            "iqTemplateName": {
+              "type": "string"
+            },
+            "iqTemplateMajorVersion": {
+              "type": "integer"
+            },
+            "location": {
+              "type": "string"
+            },
+            "locality": {
+              "type": "string"
+            },
+            "equipmentRecordId": {
+              "type": "string"
+            },
+            "equipmentReference": {
+              "type": "string"
+            },
+            "equipmentName": {
+              "type": "string"
+            },
+            "equipmentSerialNumber": {
+              "type": "string"
+            },
+            "equipmentAssetNumber": {
+              "type": "string"
+            },
+            "equipmentModel": {
+              "type": "string"
+            },
+            "equipmentType": {
+              "type": "string"
+            },
+            "electricalTestingDateOfTest": {
+              "type": "string",
+              "format": "date"
+            },
+            "electricalTestingTestProcedure": {
+              "type": "string"
+            },
+            "electricalTestingInspectedBy": {
+              "type": "string"
+            },
+            "electricalTestingCompanyAddress": {
+              "type": "string"
+            },
+            "electricalTestingContactName": {
+              "type": "string"
+            },
+            "electricalTestingTelephoneNo": {
+              "type": "string"
+            },
+            "electricalTestingFaxNo": {
+              "type": "string"
+            },
+            "electricalTestingWorkDone": {
+              "type": "string"
+            },
+            "electricalTestingRemedialBy": {
+              "type": "string"
+            },
+            "electricalTestingRemedialDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "electricalTestingTargetCompDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "custom": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "exportDatasetLiftingEquipGETResponse": {
+        "type": "array",
+        "description": "To ensure forwards compatibility responses do NOT set additionalProperties=false and do NOT use required fields",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "createdAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "modifiedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "createdByUser": {
+              "type": "string"
+            },
+            "modifiedByUser": {
+              "type": "string"
+            },
+            "isConfidential": {
+              "type": "boolean"
+            },
+            "isArchive": {
+              "type": "boolean"
+            },
+            "entityReference": {
+              "type": "string"
+            },
+            "orgUnitName": {
+              "type": "string"
+            },
+            "orgUnitId": {
+              "type": "string"
+            },
+            "orgUnitExternalId": {
+              "type": "string"
+            },
+            "iqTemplateName": {
+              "type": "string"
+            },
+            "iqTemplateMajorVersion": {
+              "type": "integer"
+            },
+            "location": {
+              "type": "string"
+            },
+            "locality": {
+              "type": "string"
+            },
+            "equipmentRecordId": {
+              "type": "string"
+            },
+            "equipmentReference": {
+              "type": "string"
+            },
+            "equipmentName": {
+              "type": "string"
+            },
+            "equipmentSerialNumber": {
+              "type": "string"
+            },
+            "equipmentAssetNumber": {
+              "type": "string"
+            },
+            "equipmentModel": {
+              "type": "string"
+            },
+            "equipmentType": {
+              "type": "string"
+            },
+            "liftingEquipOwnerDetails": {
+              "type": "string"
+            },
+            "liftingEquipSafeWorkingInfo": {
+              "type": "string"
+            },
+            "liftingEquipTestDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "liftingEquipRecordIssueDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "liftingEquipLastTestDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "liftingEquipCertificateNumber": {
+              "type": "string"
+            },
+            "liftingEquipRecordIssuedNumber": {
+              "type": "string"
+            },
+            "liftingEquipRecordNumber": {
+              "type": "string"
+            },
+            "liftingEquipDefects": {
+              "type": "string"
+            },
+            "liftingEquipObservations": {
+              "type": "string"
+            },
+            "liftingEquipAuthenticatorDetails": {
+              "type": "string"
+            },
+            "liftingEquipExaminedBy": {
+              "type": "string"
+            },
+            "liftingEquipExaminersComments": {
+              "type": "string"
+            },
+            "liftingEquipDeclarationDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "liftingEquipRectifyByDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "liftingEquipNextExamDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "liftingEquipRecordDate": {
+              "type": "string",
+              "format": "date"
             },
             "custom": {
               "type": "object"
