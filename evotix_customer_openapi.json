@@ -4530,6 +4530,138 @@
         ]
       }
     },
+    "/supplier-contractor": {
+      "post": {
+        "description": "Create/update a supplier contractor record. If a supplier contractor record with the provided 'reference' already exists then that supplier contractor record with the existing 'reference' is updated.",
+        "requestBody": {
+          "description": "Supplier Contractor details",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/supplierContractorPOSTRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "200 response - Successful creation or update of the supplier contractor record."
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "409": {
+            "description": "409 response - Reference provided is not unique for supplier contractor records."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/supplier-contractor/{reference}": {
+      "patch": {
+        "description": "Patch a Supplier Contractor record. The Supplier Contractor record with the provided 'reference' must exist, in that case only the record properties present in the request are updated. The rest will remain unchanged.",
+        "parameters": [
+          {
+            "description": "The unique reference of the Supplier Contractor record.",
+            "name": "reference",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Supplier Contractor details",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/supplierContractorPATCHRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "200 response - Successful patch of the supplier contractor record."
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "409": {
+            "description": "409 response - Reference provided is not unique for supplier contractor records."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      },
+      "delete": {
+        "description": "Deletes the Supplier Contractor record specified by the unique reference in the URL path.",
+        "parameters": [
+          {
+            "description": "The unique reference of the Supplier Contractor record.",
+            "name": "reference",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successfully deleted the Supplier Contractor record (note this will also be the response if specified Supplier Contractor record is already deleted or did not exist)."
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "409": {
+            "description": "409 response - Reference provided is not unique for Supplier Contractor records."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/ping": {
       "get": {
         "description": "DIAGNOSTIC USE ONLY - Provides confirmation that the API is reachable and that the API key is valid. Usage of this resource is throttled to prevent misuse (do not use this as part of regular integration processes).",
@@ -14286,6 +14418,682 @@
             "type": "string",
             "minLength": 1,
             "maxLength": 100000
+          }
+        }
+      },
+      "supplierContractorPOSTRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "reference",
+          "supplierName"
+        ],
+        "properties": {
+          "orgUnitExternalId": {
+            "description": "The Supplier Contractor record's default organisation unit identified by its unique customer defined external ID.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "isConfidential": {
+            "description": "Specifies if the record should be marked as confidential. If this field is omitted or null then the default is set to false.",
+            "type": "boolean"
+          },
+          "reference": {
+            "description": "A unique reference for the Supplier Contractor record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "supplierCode": {
+            "description": "The Supplier Contractor's code. If this field is omitted or null then there will be no supplier code for this Supplier Contractor record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "supplierName": {
+            "description": "The Supplier Contractor's name. If this field is omitted or null then there will be no supplier name for this Supplier Contractor record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "address1": {
+            "description": "The Supplier Contractor's address line 1. If this field is omitted or null then there will be no address line 1 for this Supplier Contractor record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "address2": {
+            "description": "The Supplier Contractor's address line 2. If this field is omitted or null then there will be no address line 2 for this Supplier Contractor record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "address3": {
+            "description": "The Supplier Contractor's address line 3. If this field is omitted or null then there will be no address line 3 for this Supplier Contractor record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "town": {
+            "description": "The Supplier Contractor's town. If this field is omitted or null then there will be no town for this Supplier Contractor record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "county": {
+            "description": "The Supplier Contractor's county. If this field is omitted or null then there will be no county for this Supplier Contractor record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "postcode": {
+            "description": "The Supplier Contractor's postcode. If this field is omitted or null then there will be no postcode for this Supplier Contractor record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 10
+          },
+          "telephoneNo": {
+            "description": "The Supplier Contractors's telephone number. If this field is omitted or null then there will be no telephone number for this Supplier Contractor record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30
+          },
+          "faxNo": {
+            "description": "The Supplier Contractors's fax number. If this field is omitted or null then there will be no fax number for this Supplier Contractor record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30
+          },
+          "email": {
+            "description": "The Supplier Contractors's email address. This must be a correctly formatted email address without the display name (i.e. just the actual email address). If this field is omitted or null then there will be no email for this Supplier Contractor record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "locality": {
+            "description": "The locality. This value must match a value defined in the picklist data dictionary for this field in customer's default language or base system language (English-UK). If this field is omitted or null then there will be no locality for this Supplier Contractor record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "areasOfAvailability": {
+            "description": "A list of Areas of Availability. This value must match a value defined in the picklist data dictionary for this field in customer's default language or base system language (English-UK). If this field is omitted or null then there will be no Areas of Availability for this Supplier Contractor record.",
+            "type": "array",
+            "minItems": 0,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 255
+            }
+          },
+          "contactInformation": {
+            "description": "The Contact Information section",
+            "type": "object",
+            "properties": {
+              "contactName": {
+                "description": "The Supplier Contractor's main contact. If this field is omitted or null then there will be no contact name for this Supplier Contractor record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "contactTelephoneNo": {
+                "description": "The Supplier Contractor's main contact's telephone number. If this field is omitted or null then there will be no contact telephone number for this Supplier Contractor record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 30
+              },
+              "contactEmail": {
+                "description": "The Supplier Contractor's main contact's email address. This must be a correctly formatted email address without the display name (i.e. just the actual email address). If this field is omitted or null then there will be no contact email for this Supplier Contractor record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 255
+              },
+              "healthAndSafetyOfficer": {
+                "description": "The Supplier Contractor's health and safety officer. If this field is omitted or null then there will be no health and safety officer for this Supplier Contractor record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "healthAndSafetyOfficerTelephone": {
+                "description": "The Supplier Contractor's health and safety officer's telephone. If this field is omitted or null then there will be no health and safety officer telephone for this Supplier Contractor record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 30
+              },
+              "healthAndSafetyOfficerEmail": {
+                "description": "The Supplier Contractor's health and safety officer's email address. This must be a correctly formatted email address without the display name (i.e. just the actual email address). If this field is omitted or null then there will be no health and safety officer email for this Supplier Contractor record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 255
+              },
+              "lineManager": {
+                "description": "The Supplier Contractor's line manager. If this field is omitted or null then there will be no line manager for this Supplier Contractor record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "lineManagerTelephone": {
+                "description": "The Supplier Contractor's line manager's telephone. If this field is omitted or null then there will be no line manager telephone for this Supplier Contractor record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 30
+              },
+              "lineManagerEmail": {
+                "description": "The Supplier Contractor's line manager's email address. This must be a correctly formatted email address without the display name (i.e. just the actual email address). If this field is omitted or null then there will be no line manager email for this Supplier Contractor record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 255
+              },
+              "sponsor": {
+                "description": "The Supplier Contractor's sponsor. If this field is omitted or null then there will be no sponsor for this Supplier Contractor record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "sponsorTelephone": {
+                "description": "The Supplier Contractor's sponsor's telephone. If this field is omitted or null then there will be no sponsor telephone for this Supplier Contractor record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 30
+              },
+              "sponsorEmail": {
+                "description": "The Supplier Contractor's sponsor's email address. This must be a correctly formatted email address without the display name (i.e. just the actual email address). If this field is omitted or null then there will be no sponsor email for this Supplier Contractor record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 255
+              }
+            }
+          },
+          "serviceInformation": {
+            "description": "The Service Information section",
+            "type": "object",
+            "properties": {
+              "productsSupplied": {
+                "description": "The products and or services supplied. If this field is omitted or null then there will be no products and or services supplied for this Supplier Contractor record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100000
+              },
+              "detailsOfLastWork": {
+                "description": "The products and or services supplied. If this field is omitted or null then there will be no products and or services supplied for this Supplier Contractor record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100000
+              },
+              "lastOrderWorkDate": {
+                "description": "The date of the last order or work. This value must be in the format YYYY-MM-DD. If this field is omitted or null then there will be no last order or work date for this Supplier Contractor record.",
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 25
+              },
+              "workToBeUndertaken": {
+                "description": "The work to be undertaken. If this field is omitted or null then there will be no work to be undertaken detail for this Supplier Contractor record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100000
+              }
+            }
+          },
+          "insuranceDetails": {
+            "description": "A list of the insurance details. If this field is omitted or null then there will be no insurance details for this Supplier Contractor record.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "insuranceType": {
+                  "description": "The insurance type. This value must match a value defined in the picklist data dictionary for this field in customer's default language or base system language (English-UK). If this field is omitted or null then there will be no insurance type for this insurance details record.",
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 255
+                },
+                "isLiable": {
+                  "description": "Specifies if the insurance is liable. If this field is omitted or null then the default is set to false.",
+                  "type": "boolean"
+                },
+                "expiry": {
+                  "description": "The insurance expiry date. This value must be in the format YYYY-MM-DD. If this field is omitted or null then there will be no insurance expiry date for this insurance details record.",
+                  "type": "string",
+                  "minLength": 10,
+                  "maxLength": 25
+                },
+                "indemnityLimit": {
+                  "description": "The insurance indemnity limit. If this field is omitted or null then there will be no insurance indemnity limit for this insurance details record.",
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                }
+              }
+            }
+          },
+          "scopeOfServices": {
+            "description": "A list of the scope of services details. If this field is omitted or null then there will be no scope of service details for this Supplier Contractor record.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "category": {
+                  "description": "The Scope of Service Category type. This value must match a value defined in the picklist data dictionary for this field in customer's default language or base system language (English-UK). If this field is omitted or null then there will be no category for this Supplier Contractor record.",
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 255
+                },
+                "subCategory": {
+                  "description": "The Scope of Service Sub Category type. This value must match a value defined in the picklist data dictionary for this field in customer's default language or base system language (English-UK). If this field is omitted or null then there will be no sub category for this Supplier Contractor record.",
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 255
+                }
+              }
+            }
+          },
+          "personnelReference": {
+            "description": "A list of the Personnel to be associated to the Supplier Contractor. The unique reference of the person register record. If this field is omitted or null then there will be no personnel for this Supplier Contractor record.",
+            "type": "array",
+            "minItems": 0,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            }
+          },
+          "auditReference": {
+            "description": "A list of the Audits to be associated to the Supplier Contractor. The unique reference of the audit record. If this field is omitted or null then there will be no audits for this Supplier Contractor record.",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            }
+          },
+          "conclusion": {
+            "description": "The Conclusion section",
+            "type": "object",
+            "properties": {
+              "additionalInformation": {
+                "description": "The Supplier Contractor record's additional information for the conclusion. If this field is omitted or null then there will be no additional information for the Supplier Contractor record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100000
+              },
+              "comments": {
+                "description": "The Supplier Contractor record's comments for the conclusion. If this field is omitted or null then there will be no comments for the Supplier Contractor record.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100000
+              },
+              "supplierStatus": {
+                "description": "The conclusions supplier status. This value must match a value defined in the picklist data dictionary for this field in customer's default language or base system language (English-UK). If this field is omitted or null then there will be no supplier status for the conclusion.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 255
+              },
+              "starRating": {
+                "description": "The conclusions star rating. This value must match a value defined in the picklist data dictionary for this field in customer's default language or base system language (English-UK). If this field is omitted or null then there will be no star rating for the conclusion.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 255
+              },
+              "additionalDate1": {
+                "description": "The conclusions additional date 1. This value must be in the format YYYY-MM-DD. If this field is omitted or null then there will be no additional date 1 for the conclusion.",
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 25
+              },
+              "additionalDate2": {
+                "description": "The conclusions additional date 2. This value must be in the format YYYY-MM-DD. If this field is omitted or null then there will be no additional date 2 for the conclusion.",
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 25
+              },
+              "approvalDate": {
+                "description": "The conclusions approval date. This value must be in the format YYYY-MM-DD. If this field is omitted or null then there will be no approval date for the conclusion.",
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 25
+              },
+              "inductionType": {
+                "description": "The conclusions InductionType. This value must match a value defined in the picklist data dictionary for this field in customer's default language or base system language (English-UK). If this field is omitted or null then there will be no star rating for the conclusion.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 255
+              }
+            }
+          }
+        }
+      },
+      "supplierContractorPATCHRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "orgUnitExternalId": {
+            "description": "The Supplier Contractor record's default organisation unit identified by its unique customer defined external ID.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "isConfidential": {
+            "description": "Specifies if the record should be marked as confidential. If this field is omitted or null then the default is set to false.",
+            "type": "boolean"
+          },
+          "supplierCode": {
+            "description": "The Supplier Contractor's code.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "supplierName": {
+            "description": "The Supplier Contractor's name.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "address1": {
+            "description": "The Supplier Contractor's address line 1.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "address2": {
+            "description": "The Supplier Contractor's address line 2.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "address3": {
+            "description": "The Supplier Contractor's address line 3.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "town": {
+            "description": "The Supplier Contractor's town.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "county": {
+            "description": "The Supplier Contractor's county.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "postcode": {
+            "description": "The Supplier Contractor's postcode.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 10
+          },
+          "telephoneNo": {
+            "description": "The Supplier Contractors's telephone number.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30
+          },
+          "faxNo": {
+            "description": "The Supplier Contractors's fax number.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30
+          },
+          "email": {
+            "description": "The Supplier Contractors's email address. This must be a correctly formatted email address without the display name (i.e. just the actual email address).",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "locality": {
+            "description": "The locality. This value must match a value defined in the picklist data dictionary for this field in customer's default language or base system language (English-UK).",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "areasOfAvailability": {
+            "description": "A list of Areas of Availability. This value must match a value defined in the picklist data dictionary for this field in customer's default language or base system language (English-UK).",
+            "type": "array",
+            "minItems": 0,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 255
+            }
+          },
+          "contactInformation": {
+            "description": "The Contact Information section",
+            "type": "object",
+            "properties": {
+              "contactName": {
+                "description": "The Supplier Contractor's main contact.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "contactTelephoneNo": {
+                "description": "The Supplier Contractor's main contact's telephone number.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 30
+              },
+              "contactEmail": {
+                "description": "The Supplier Contractor's main contact's email address. This must be a correctly formatted email address without the display name (i.e. just the actual email address).",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 255
+              },
+              "healthAndSafetyOfficer": {
+                "description": "The Supplier Contractor's health and safety officer.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "healthAndSafetyOfficerTelephone": {
+                "description": "The Supplier Contractor's health and safety officer's telephone.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 30
+              },
+              "healthAndSafetyOfficerEmail": {
+                "description": "The Supplier Contractor's health and safety officer's email address. This must be a correctly formatted email address without the display name (i.e. just the actual email address).",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 255
+              },
+              "lineManager": {
+                "description": "The Supplier Contractor's line manager.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "lineManagerTelephone": {
+                "description": "The Supplier Contractor's line manager's telephone.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 30
+              },
+              "lineManagerEmail": {
+                "description": "The Supplier Contractor's line manager's email address. This must be a correctly formatted email address without the display name (i.e. just the actual email address).",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 255
+              },
+              "sponsor": {
+                "description": "The Supplier Contractor's sponsor.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "sponsorTelephone": {
+                "description": "The Supplier Contractor's sponsor's telephone.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 30
+              },
+              "sponsorEmail": {
+                "description": "The Supplier Contractor's sponsor's email address. This must be a correctly formatted email address without the display name (i.e. just the actual email address).",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 255
+              }
+            }
+          },
+          "serviceInformation": {
+            "description": "The Service Information section",
+            "type": "object",
+            "properties": {
+              "productsSupplied": {
+                "description": "The products and or services supplied.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100000
+              },
+              "detailsOfLastWork": {
+                "description": "The products and or services supplied.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100000
+              },
+              "lastOrderWorkDate": {
+                "description": "The date of the last order or work. This value must be in the format YYYY-MM-DD.",
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 25
+              },
+              "workToBeUndertaken": {
+                "description": "The work to be undertaken.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100000
+              }
+            }
+          },
+          "insuranceDetails": {
+            "description": "A list of the insurance details.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "insuranceType": {
+                  "description": "The insurance type. This value, if provided, must match a value defined in the picklist data dictionary for this field in customer's default language or base system language (English-UK).",
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 255
+                },
+                "isLiable": {
+                  "description": "Specifies if the insurance is liable. If this field is omitted or null then the default is set to false.",
+                  "type": "boolean"
+                },
+                "expiry": {
+                  "description": "The insurance expiry date. This value must be in the format YYYY-MM-DD.",
+                  "type": "string",
+                  "minLength": 10,
+                  "maxLength": 25
+                },
+                "indemnityLimit": {
+                  "description": "The insurance indemnity limit.",
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                }
+              }
+            }
+          },
+          "scopeOfServices": {
+            "description": "A list of the insurance details.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "category": {
+                  "description": "The Scope of Service Category type. This value must match a value defined in the picklist data dictionary for this field in customer's default language or base system language (English-UK).",
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 255
+                },
+                "subCategory": {
+                  "description": "The Scope of Service Sub Category type. This value must match a value defined in the picklist data dictionary for this field in customer's default language or base system language (English-UK).",
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 255
+                }
+              }
+            }
+          },
+          "personnelReference": {
+            "description": "A list of the Personnel to be associated to the Supplier Contractor. The unique reference of the person register record.",
+            "type": "array",
+            "minItems": 0,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            }
+          },
+          "auditReference": {
+            "description": "A list of the Audits to be associated to the Supplier Contractor. The unique reference of the audit record.",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            }
+          },
+          "conclusion": {
+            "description": "The Conclusion section",
+            "type": "object",
+            "properties": {
+              "additionalInformation": {
+                "description": "The Supplier Contractor record's additional information for the conclusion.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100000
+              },
+              "comments": {
+                "description": "The Supplier Contractor record's comments for the conclusion.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100000
+              },
+              "supplierStatus": {
+                "description": "The conclusions supplier status. This value, if provided, must match a value defined in the picklist data dictionary for this field in customer's default language or base system language (English-UK).",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 255
+              },
+              "starRating": {
+                "description": "The conclusions star rating. This value, if provided,  must match a value defined in the picklist data dictionary for this field in customer's default language or base system language (English-UK).",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 255
+              },
+              "additionalDate1": {
+                "description": "The conclusions additional date 1. This value, if provided,  must be in the format YYYY-MM-DD.",
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 25
+              },
+              "additionalDate2": {
+                "description": "The conclusions additional date 2. This value, if provided,  must be in the format YYYY-MM-DD.",
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 25
+              },
+              "approvalDate": {
+                "description": "The conclusions approval date. This value must be in the format YYYY-MM-DD.",
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 25
+              },
+              "inductionType": {
+                "description": "The conclusions InductionType. This value must match a value defined in the picklist data dictionary for this field in customer's default language or base system language (English-UK).",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 255
+              }
+            }
           }
         }
       }
