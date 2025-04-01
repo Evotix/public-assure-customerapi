@@ -13,6 +13,11 @@
     "/export/dataset/vehicle-incident": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -52,6 +57,11 @@
     "/export/dataset/vehicle-incident/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -92,6 +102,11 @@
     "/export/dataset/vehicle-register": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -131,6 +146,11 @@
     "/export/dataset/vehicle-register/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -171,6 +191,11 @@
     "/export/dataset/incident-event": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -210,6 +235,11 @@
     "/export/dataset/incident-event/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -250,6 +280,11 @@
     "/export/dataset/pre-tender": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -289,6 +324,11 @@
     "/export/dataset/pre-tender/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -329,6 +369,11 @@
     "/export/dataset/procedural": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -368,6 +413,11 @@
     "/export/dataset/procedural/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -408,6 +458,11 @@
     "/export/dataset/hazard-identification": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -447,6 +502,11 @@
     "/export/dataset/hazard-spotting": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -486,6 +546,11 @@
     "/export/dataset/hazard-spotting/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -526,6 +591,11 @@
     "/export/dataset/hs-file": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -565,6 +635,11 @@
     "/export/dataset/hs-file/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -605,6 +680,11 @@
     "/export/dataset/person": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -644,6 +724,11 @@
     "/export/dataset/person/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -684,6 +769,11 @@
     "/export/dataset/general-risk": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -723,6 +813,11 @@
     "/export/dataset/general-risk/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -763,6 +858,11 @@
     "/export/dataset/training": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -802,6 +902,11 @@
     "/export/dataset/training/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -842,6 +947,11 @@
     "/export/dataset/equipment": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -881,6 +991,11 @@
     "/export/dataset/equipment/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -921,6 +1036,11 @@
     "/export/dataset/org-unit": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -960,6 +1080,11 @@
     "/export/dataset/safe-unsafe": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -999,6 +1124,11 @@
     "/export/dataset/safe-unsafe/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -1039,6 +1169,11 @@
     "/export/dataset/fire-risk": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -1078,6 +1213,11 @@
     "/export/dataset/fire-risk/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -1118,6 +1258,11 @@
     "/export/dataset/supplier-contractor": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -1157,6 +1302,11 @@
     "/export/dataset/supplier-contractor/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -1197,6 +1347,11 @@
     "/export/dataset/incident-analysis": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -1236,6 +1391,11 @@
     "/export/dataset/incident-analysis/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -1276,6 +1436,11 @@
     "/export/dataset/action": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -1315,6 +1480,11 @@
     "/export/dataset/aspect-impact": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -1354,6 +1524,11 @@
     "/export/dataset/aspect-impact/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -1394,6 +1569,11 @@
     "/export/dataset/aspect-impact-component": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -1433,6 +1613,11 @@
     "/export/dataset/aspect-impact-component/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -1473,6 +1658,11 @@
     "/export/dataset/aspect-impact-reporting": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -1512,6 +1702,11 @@
     "/export/dataset/aspect-impact-reporting/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -1552,6 +1747,11 @@
     "/export/dataset/approval": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -1591,6 +1791,11 @@
     "/export/dataset/project-risk": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -1630,6 +1835,11 @@
     "/export/dataset/project-risk/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -1670,6 +1880,11 @@
     "/export/dataset/coshh": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -1709,6 +1924,11 @@
     "/export/dataset/coshh/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -1749,6 +1969,11 @@
     "/export/dataset/coshh-activity": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -1788,6 +2013,11 @@
     "/export/dataset/coshh-activity/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -1828,6 +2058,11 @@
     "/export/dataset/coshh-ppe-image": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -1867,6 +2102,11 @@
     "/export/dataset/coshh-task": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -1906,6 +2146,11 @@
     "/export/dataset/course": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -1945,6 +2190,11 @@
     "/export/dataset/course/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -1985,6 +2235,11 @@
     "/export/dataset/driving": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -2024,6 +2279,11 @@
     "/export/dataset/driving/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -2064,6 +2324,11 @@
     "/export/dataset/activity-risk": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -2103,6 +2368,11 @@
     "/export/dataset/activity-risk/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -2143,6 +2413,11 @@
     "/export/dataset/act-haz-con": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -2182,6 +2457,11 @@
     "/export/dataset/project": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -2221,6 +2501,11 @@
     "/export/dataset/project/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -2261,6 +2546,11 @@
     "/export/dataset/air-emissions": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -2300,6 +2590,11 @@
     "/export/dataset/air-emissions/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -2340,6 +2635,11 @@
     "/export/dataset/land-contamination": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -2379,6 +2679,11 @@
     "/export/dataset/land-contamination/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -2419,6 +2724,11 @@
     "/export/dataset/release-to-water": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -2458,6 +2768,11 @@
     "/export/dataset/release-to-water/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -2498,6 +2813,11 @@
     "/export/dataset/survey-sample": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -2537,6 +2857,11 @@
     "/export/dataset/third-party": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -2576,6 +2901,11 @@
     "/export/dataset/environmental": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -2615,6 +2945,11 @@
     "/export/dataset/environmental/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -2655,6 +2990,11 @@
     "/export/dataset/waste-detail": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -2694,6 +3034,11 @@
     "/export/dataset/waste-handler": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -2733,6 +3078,11 @@
     "/export/dataset/waste-handler/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -2773,6 +3123,11 @@
     "/export/dataset/waste-material": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -2812,6 +3167,11 @@
     "/export/dataset/waste-material/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -2852,6 +3212,11 @@
     "/export/dataset/waste-transfer": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -2891,6 +3256,11 @@
     "/export/dataset/waste-transfer/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -2931,6 +3301,11 @@
     "/export/dataset/behavioural": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -2970,6 +3345,11 @@
     "/export/dataset/behavioural/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -3010,6 +3390,11 @@
     "/export/dataset/insurance-details": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -3049,6 +3434,11 @@
     "/export/dataset/scope-of-service": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -3088,6 +3478,11 @@
     "/export/dataset/injury-classification": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -3127,6 +3522,11 @@
     "/export/dataset/claim": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -3166,6 +3566,11 @@
     "/export/dataset/claim/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -3206,6 +3611,11 @@
     "/export/dataset/construction-phase": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -3245,6 +3655,11 @@
     "/export/dataset/construction-phase/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -3285,6 +3700,11 @@
     "/export/dataset/notification-of-project": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -3324,6 +3744,11 @@
     "/export/dataset/notification-of-project/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -3364,6 +3789,11 @@
     "/export/dataset/electrical-testing": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -3403,6 +3833,11 @@
     "/export/dataset/electrical-testing/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -3443,6 +3878,11 @@
     "/export/dataset/lifting-equip": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -3482,6 +3922,11 @@
     "/export/dataset/lifting-equip/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -3522,6 +3967,11 @@
     "/export/dataset/equip-issue": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -3561,6 +4011,11 @@
     "/export/dataset/equip-issue/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -3601,6 +4056,11 @@
     "/export/dataset/investigation": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -3640,6 +4100,11 @@
     "/export/dataset/investigation/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -3680,6 +4145,11 @@
     "/export/dataset/ppe": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -3719,6 +4189,11 @@
     "/export/dataset/ppe/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -3759,6 +4234,11 @@
     "/export/dataset/osha300a": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -3798,6 +4278,11 @@
     "/export/dataset/osha300a/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -3838,6 +4323,11 @@
     "/export/dataset/osha301": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -3877,6 +4367,11 @@
     "/export/dataset/osha301/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -3917,6 +4412,11 @@
     "/export/dataset/equip-maintenance": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -3956,6 +4456,11 @@
     "/export/dataset/equip-maintenance/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -3996,6 +4501,11 @@
     "/export/dataset/job-hazard-analysis": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -4035,6 +4545,11 @@
     "/export/dataset/job-hazard-analysis/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -4075,6 +4590,11 @@
     "/export/dataset/job-hazard-analysis-haz-con": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -4114,6 +4634,11 @@
     "/export/dataset/job-hazard-analysis-ppe-image": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -4153,6 +4678,11 @@
     "/export/dataset/review": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -4192,6 +4722,11 @@
     "/export/dataset/assailant": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -4231,6 +4766,11 @@
     "/export/dataset/tna": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -4270,6 +4810,11 @@
     "/export/dataset/tna/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -4310,6 +4855,11 @@
     "/export/dataset/manual-handling": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -4349,6 +4899,11 @@
     "/export/dataset/manual-handling/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -4359,6 +4914,124 @@
                 }
               },
               "application/jsonlines": {},
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/dse": {
+      "get": {
+        "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetDseGETResponse"
+                }
+              },
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/dse/iq": {
+      "get": {
+        "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetIqGETResponse"
+                }
+              },
+              "application/jsonlines": {},
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/user": {
+      "get": {
+        "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetUserGETResponse"
+                }
+              },
               "text/csv": {},
               "application/csv": {}
             }
@@ -5160,6 +5833,21 @@
     "/{proxy+}": {}
   },
   "components": {
+    "parameters": {
+      "x-extract-schedule": {
+        "name": "x-extract-schedule",
+        "in": "header",
+        "description": "Optional header that specifies what type of extract schedule to return. Allowed values: 'hourly' or 'daily'. If the header is not provided the default type of extract schedule will be 'daily'.",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "enum": [
+            "hourly",
+            "daily"
+          ]
+        }
+      }
+    },
     "schemas": {
       "exportDatasetIqGETResponse": {
         "type": "array",
@@ -5326,6 +6014,12 @@
             "incidentReportedToDate": {
               "type": "string",
               "format": "date"
+            },
+            "incidentSubcontractor": {
+              "type": "string"
+            },
+            "incidentSubcontractorOther": {
+              "type": "string"
             },
             "incidentDetails": {
               "type": "string"
@@ -6040,6 +6734,12 @@
             "incidentReportedToDate": {
               "type": "string",
               "format": "date"
+            },
+            "incidentSubcontractor": {
+              "type": "string"
+            },
+            "incidentSubcontractorOther": {
+              "type": "string"
             },
             "incidentStartAbsenceDate": {
               "type": "string",
@@ -7565,6 +8265,9 @@
               "format": "date-time"
             },
             "orgUnitName": {
+              "type": "string"
+            },
+            "orgUnitNamePath": {
               "type": "string"
             },
             "orgUnitDetails": {
@@ -13906,6 +14609,244 @@
             },
             "custom": {
               "type": "object"
+            }
+          }
+        }
+      },
+      "exportDatasetDseGETResponse": {
+        "type": "array",
+        "description": "To ensure forwards compatibility responses do NOT set additionalProperties=false and do NOT use required fields",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "createdAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "modifiedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "createdByUser": {
+              "type": "string"
+            },
+            "modifiedByUser": {
+              "type": "string"
+            },
+            "isConfidential": {
+              "type": "boolean"
+            },
+            "isArchive": {
+              "type": "boolean"
+            },
+            "entityReference": {
+              "type": "string"
+            },
+            "orgUnitName": {
+              "type": "string"
+            },
+            "orgUnitId": {
+              "type": "string"
+            },
+            "orgUnitExternalId": {
+              "type": "string"
+            },
+            "iqTemplateName": {
+              "type": "string"
+            },
+            "iqTemplateMajorVersion": {
+              "type": "integer"
+            },
+            "iqQuestionnaireStartedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "iqQuestionnaireCompletedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "statusRating": {
+              "type": "string"
+            },
+            "location": {
+              "type": "string"
+            },
+            "locality": {
+              "type": "string"
+            },
+            "projectRecordId": {
+              "type": "string"
+            },
+            "projectReference": {
+              "type": "string"
+            },
+            "projectRiskRecordId": {
+              "type": "string"
+            },
+            "projectRiskReference": {
+              "type": "string"
+            },
+            "dseDescription": {
+              "type": "string"
+            },
+            "personAssessorRecordId": {
+              "type": "string"
+            },
+            "personAssessorReference": {
+              "type": "string"
+            },
+            "personAssessorForename": {
+              "type": "string"
+            },
+            "personAssessorSurname": {
+              "type": "string"
+            },
+            "dseAssessmentDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "personUserRecordId": {
+              "type": "string"
+            },
+            "personUserReference": {
+              "type": "string"
+            },
+            "personUserForename": {
+              "type": "string"
+            },
+            "personUserSurname": {
+              "type": "string"
+            },
+            "dseUserJob": {
+              "type": "string"
+            },
+            "dseMake": {
+              "type": "string"
+            },
+            "dseModel": {
+              "type": "string"
+            },
+            "dseScreentype": {
+              "type": "string"
+            },
+            "dseSpecify": {
+              "type": "string"
+            },
+            "dseAssetNumber": {
+              "type": "string"
+            },
+            "dsePrimarySoftware": {
+              "type": "string"
+            },
+            "dseConclusion": {
+              "type": "string"
+            },
+            "dseActionPlan": {
+              "type": "string"
+            },
+            "dseFactorCaption": {
+              "type": "string"
+            },
+            "dseFactorValue": {
+              "type": "integer"
+            },
+            "dseFactorCount": {
+              "type": "integer"
+            },
+            "custom": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "exportDatasetUserGETResponse": {
+        "type": "array",
+        "description": "To ensure forwards compatibility responses do NOT set additionalProperties=false and do NOT use required fields",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "userCreatedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "userModifiedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "userName": {
+              "type": "string"
+            },
+            "userFullName": {
+              "type": "string"
+            },
+            "userEmail": {
+              "type": "string"
+            },
+            "userIsManager": {
+              "type": "boolean"
+            },
+            "userIsCurrent": {
+              "type": "boolean"
+            },
+            "personRecordId": {
+              "type": "string"
+            },
+            "personReference": {
+              "type": "string"
+            },
+            "orgUnitRecordId": {
+              "type": "string"
+            },
+            "orgUnitName": {
+              "type": "string"
+            },
+            "orgUnitMaskedRecordId": {
+              "type": "string"
+            },
+            "orgUnitMaskedName": {
+              "type": "string"
+            },
+            "userManagerRecordId": {
+              "type": "string"
+            },
+            "userManagerFullName": {
+              "type": "string"
+            },
+            "userExpiresOnNextLogin": {
+              "type": "boolean"
+            },
+            "userSupervisorPrivilege": {
+              "type": "string"
+            },
+            "userTimezone": {
+              "type": "string"
+            },
+            "userLanguage": {
+              "type": "string"
+            },
+            "userDateFormat": {
+              "type": "string"
+            },
+            "userInsightsRole": {
+              "type": "string"
+            },
+            "userAccessType": {
+              "type": "string"
+            },
+            "userExternalId": {
+              "type": "string"
+            },
+            "userPermissions": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
             }
           }
         }
