@@ -8531,6 +8531,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -8544,6 +8547,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -8711,6 +8732,9 @@
             },
             "vehicleWhereInspect": {
               "type": "string"
+            },
+            "vehicleIsOtherVehicleInvolved": {
+              "type": "boolean"
             },
             "otherVehicles": {
               "type": "string"
@@ -9096,6 +9120,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -9109,6 +9136,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -9230,6 +9275,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -9243,6 +9291,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -9388,8 +9454,14 @@
             "violentAssailantStatus": {
               "type": "string"
             },
+            "violentWeaponUsed": {
+              "type": "boolean"
+            },
             "violentWeaponType": {
               "type": "string"
+            },
+            "violentRacialAssault": {
+              "type": "boolean"
             },
             "violentRacialType": {
               "type": "string"
@@ -9407,6 +9479,9 @@
               "type": "string"
             },
             "healthAffected": {
+              "type": "boolean"
+            },
+            "healthWasTreatmentGiven": {
               "type": "boolean"
             },
             "healthTreatment": {
@@ -9715,6 +9790,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -9728,6 +9806,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -9807,6 +9903,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -9820,6 +9919,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -9991,6 +10108,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -10004,6 +10124,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -10142,6 +10280,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -10155,6 +10296,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -10279,6 +10438,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -10292,6 +10454,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -10489,6 +10669,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -10502,6 +10685,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -10599,6 +10800,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -10612,6 +10816,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -10669,12 +10891,21 @@
             "trainingCourseSubject": {
               "type": "string"
             },
+            "trainingOverrideCourseDate": {
+              "type": "boolean"
+            },
             "trainingCourseDate": {
               "type": "string",
               "format": "date"
             },
+            "trainingOverrideCourseCost": {
+              "type": "boolean"
+            },
             "trainingCourseCost": {
               "type": "number"
+            },
+            "trainingOverrideCourseProvider": {
+              "type": "boolean"
             },
             "trainingCouseProvider": {
               "type": "string"
@@ -10751,6 +10982,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -10764,6 +10998,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -10911,6 +11163,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -10924,6 +11179,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -11025,6 +11298,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -11038,6 +11314,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -11141,6 +11435,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -11154,6 +11451,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -11338,6 +11653,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -11351,6 +11669,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -11468,14 +11804,6 @@
             },
             "iqTemplateMajorVersion": {
               "type": "integer"
-            },
-            "iqQuestionnaireStartedAtUTC": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "iqQuestionnaireCompletedAtUTC": {
-              "type": "string",
-              "format": "date-time"
             },
             "actionType": {
               "type": "string"
@@ -11622,6 +11950,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -11635,6 +11966,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -11732,6 +12081,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -11745,6 +12097,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -11820,6 +12190,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -11833,6 +12206,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -12012,6 +12403,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -12025,6 +12419,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -12110,6 +12522,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -12123,6 +12538,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -12284,6 +12717,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -12297,6 +12733,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -12636,6 +13090,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -12649,6 +13106,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -12747,6 +13222,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -12760,6 +13238,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -12905,6 +13401,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -12918,6 +13417,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -13101,6 +13618,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -13114,6 +13634,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -13284,6 +13822,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -13297,6 +13838,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -13394,6 +13953,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -13407,6 +13969,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -13504,6 +14084,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -13517,6 +14100,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -13795,6 +14396,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -13808,6 +14412,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -13955,6 +14577,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -13968,6 +14593,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -14062,6 +14705,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -14075,6 +14721,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -14150,6 +14814,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -14163,6 +14830,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -14422,6 +15107,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -14435,6 +15123,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -14662,6 +15368,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -14675,6 +15384,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -14970,6 +15697,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -14983,6 +15713,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -15062,6 +15810,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -15075,6 +15826,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -15312,6 +16081,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -15325,6 +16097,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -15439,6 +16229,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -15452,6 +16245,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -15588,6 +16399,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -15601,6 +16415,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -15712,6 +16544,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -15725,6 +16560,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -15865,6 +16718,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -15878,6 +16734,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -16096,6 +16970,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -16109,6 +16986,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -16309,6 +17204,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -16322,6 +17220,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -16451,6 +17367,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -16464,6 +17383,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -16601,6 +17538,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -16614,6 +17554,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -16971,6 +17929,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -16984,6 +17945,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -17107,6 +18086,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -17120,6 +18102,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -17233,6 +18233,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -17246,6 +18249,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -17382,6 +18403,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -17395,6 +18419,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
@@ -17604,6 +18646,9 @@
             "orgUnitExternalId": {
               "type": "string"
             },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
             "iqTemplateName": {
               "type": "string"
             },
@@ -17617,6 +18662,24 @@
             "iqQuestionnaireCompletedAtUTC": {
               "type": "string",
               "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
             },
             "statusRating": {
               "type": "string"
