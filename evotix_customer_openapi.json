@@ -8576,7 +8576,8 @@
               "type": "string"
             },
             "projectRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project` endpoint."
             },
             "projectReference": {
               "type": "string"
@@ -8639,7 +8640,8 @@
               "type": "string"
             },
             "vehicleRegisterRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/vehicle-register` endpoint."
             },
             "vehicleRegisterReference": {
               "type": "string"
@@ -8692,7 +8694,8 @@
               "format": "date"
             },
             "vehicleRegisterOrgUnitRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/org-unit` endpoint."
             },
             "vehicleRegisterOrgUnitName": {
               "type": "string"
@@ -8800,7 +8803,8 @@
               "type": "boolean"
             },
             "investigationRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/investigation` endpoint."
             },
             "investigationReference": {
               "type": "string"
@@ -8837,7 +8841,8 @@
               "type": "string"
             },
             "supplierContractorRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/supplier-contractor` endpoint."
             },
             "supplierContractorReference": {
               "type": "string"
@@ -8864,7 +8869,8 @@
               "type": "string"
             },
             "personRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/person` endpoint."
             },
             "personReference": {
               "type": "string"
@@ -9320,19 +9326,22 @@
               "type": "string"
             },
             "projectRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project` endpoint."
             },
             "projectReference": {
               "type": "string"
             },
             "vehicleIncidentRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/vehicle-incident` endpoint."
             },
             "vehicleIncidentReference": {
               "type": "string"
             },
             "oshaEstablishmentRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/osha-establishment` endpoint."
             },
             "oshaEstablishmentReference": {
               "type": "string"
@@ -9418,7 +9427,8 @@
               "type": "boolean"
             },
             "investigationRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/investigation` endpoint."
             },
             "investigationReference": {
               "type": "string"
@@ -9521,7 +9531,8 @@
               "type": "boolean"
             },
             "personRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/person` endpoint."
             },
             "personReference": {
               "type": "string"
@@ -9582,7 +9593,8 @@
               "type": "string"
             },
             "personOrgUnitRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/org-unit` endpoint."
             },
             "personOrgUnitName": {
               "type": "string"
@@ -9612,7 +9624,8 @@
               "type": "boolean"
             },
             "equipRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/equipment` endpoint."
             },
             "equipReference": {
               "type": "string"
@@ -9627,7 +9640,8 @@
               "type": "boolean"
             },
             "equipSecondRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/equipment` endpoint."
             },
             "equipSecondReference": {
               "type": "string"
@@ -9851,13 +9865,15 @@
               "format": "date"
             },
             "notificationOfProjectRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/notification-of-project` endpoint."
             },
             "notificationOfProjectReference": {
               "type": "string"
             },
             "supplierContractorRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/supplier-contractor` endpoint."
             },
             "supplierContractorReference": {
               "type": "string"
@@ -9957,7 +9973,8 @@
               "type": "string"
             },
             "projectRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project` endpoint."
             },
             "projectReference": {
               "type": "string"
@@ -10036,7 +10053,8 @@
               "type": "string"
             },
             "recordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `export/dataset/coshh-activity` endpoint."
             },
             "recordReference": {
               "type": "string"
@@ -10162,7 +10180,8 @@
               "type": "string"
             },
             "projectRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project` endpoint."
             },
             "projectReference": {
               "type": "string"
@@ -10334,7 +10353,8 @@
               "type": "string"
             },
             "supplierContractorRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/supplier-contractor` endpoint."
             },
             "supplierContractorReference": {
               "type": "string"
@@ -10343,7 +10363,8 @@
               "type": "string"
             },
             "notificationOfProjectRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/notification-of-project` endpoint."
             },
             "notificationOfProjectReference": {
               "type": "string"
@@ -10495,7 +10516,8 @@
               "type": "array",
               "items": {
                 "type": "string"
-              }
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/project` endpoint."
             },
             "projectReferences": {
               "type": "array",
@@ -10622,7 +10644,8 @@
               "type": "string"
             },
             "userRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/user` endpoint."
             },
             "userUsername": {
               "type": "string"
@@ -10723,13 +10746,15 @@
               "type": "string"
             },
             "projectRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project` endpoint."
             },
             "projectReference": {
               "type": "string"
             },
             "projectRiskRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project-risk` endpoint."
             },
             "projectRiskReference": {
               "type": "string"
@@ -10862,7 +10887,8 @@
               "format": "date"
             },
             "tnaRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/tna` endpoint."
             },
             "tnaReference": {
               "type": "string"
@@ -10874,7 +10900,8 @@
               "type": "string"
             },
             "trainingEmployeeRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/person` endpoint."
             },
             "trainingEmployeeReference": {
               "type": "string"
@@ -10889,7 +10916,8 @@
               "type": "string"
             },
             "trainingCourseRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/course` endpoint."
             },
             "trainingCourseReference": {
               "type": "string"
@@ -11039,7 +11067,8 @@
               "type": "array",
               "items": {
                 "type": "string"
-              }
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/project` endpoint."
             },
             "projectReferences": {
               "type": "array",
@@ -11358,13 +11387,15 @@
               "type": "string"
             },
             "projectRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project` endpoint."
             },
             "projectReference": {
               "type": "string"
             },
             "projectRiskRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project-risk` endpoint."
             },
             "projectRiskReference": {
               "type": "string"
@@ -11498,7 +11529,8 @@
               "type": "array",
               "items": {
                 "type": "string"
-              }
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/project` endpoint."
             },
             "projectReferences": {
               "type": "array",
@@ -11782,7 +11814,8 @@
               "type": "string"
             },
             "recordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the respective endpoint that can be found in `actionModuleEndpoint` field which is part of this extract."
             },
             "actionOrgUnitName": {
               "type": "string"
@@ -12013,7 +12046,8 @@
               "type": "string"
             },
             "projectRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project` endpoint."
             },
             "projectReference": {
               "type": "string"
@@ -12022,7 +12056,8 @@
               "type": "array",
               "items": {
                 "type": "string"
-              }
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/aspect-impact-component` endpoint."
             },
             "aspectImpactComponentReferences": {
               "type": "array",
@@ -12034,7 +12069,8 @@
               "type": "string"
             },
             "personRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/person` endpoint."
             },
             "personReference": {
               "type": "string"
@@ -12253,7 +12289,8 @@
               "type": "string"
             },
             "aspectImpactComponentRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/aspect-impact-component` endpoint."
             },
             "aspectImpactComponentReference": {
               "type": "string"
@@ -12314,7 +12351,8 @@
               "type": "string"
             },
             "recordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the respective endpoint that can be found in `approvalModuleEndpoint` field which is part of this extract."
             },
             "approvalOrgUnitName": {
               "type": "string"
@@ -12466,7 +12504,8 @@
               "type": "string"
             },
             "projectRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project` endpoint."
             },
             "projectReference": {
               "type": "string"
@@ -12585,7 +12624,8 @@
               "type": "string"
             },
             "projectRiskRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project-risk` endpoint."
             },
             "projectRiskReference": {
               "type": "string"
@@ -12780,13 +12820,15 @@
               "type": "string"
             },
             "projectRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project` endpoint."
             },
             "projectReference": {
               "type": "string"
             },
             "projectRiskRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project-risk` endpoint."
             },
             "projectRiskReference": {
               "type": "string"
@@ -12935,7 +12977,8 @@
               "type": "string"
             },
             "recordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `export/dataset/coshh` endpoint."
             },
             "recordReference": {
               "type": "string"
@@ -12976,7 +13019,8 @@
               "type": "string"
             },
             "recordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `export/dataset/coshh` endpoint."
             },
             "recordReference": {
               "type": "string"
@@ -13324,7 +13368,8 @@
               "type": "string"
             },
             "personRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/person` endpoint."
             },
             "personReference": {
               "type": "string"
@@ -13464,13 +13509,15 @@
               "type": "string"
             },
             "projectRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project` endpoint."
             },
             "projectReference": {
               "type": "string"
             },
             "projectRiskRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project-risk` endpoint."
             },
             "projectRiskReference": {
               "type": "string"
@@ -13485,7 +13532,8 @@
               "type": "string"
             },
             "personRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/person` endpoint."
             },
             "activityRiskAssessorReference": {
               "type": "string"
@@ -13543,7 +13591,8 @@
               "type": "string"
             },
             "recordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `export/dataset/activity-risk` endpoint."
             },
             "recordReference": {
               "type": "string"
@@ -13898,13 +13947,15 @@
               "type": "boolean"
             },
             "environmentalRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/environmental` endpoint."
             },
             "environmentalReference": {
               "type": "string"
             },
             "personRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/person` endpoint."
             },
             "personReference": {
               "type": "string"
@@ -13916,7 +13967,8 @@
               "type": "string"
             },
             "equipmentRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/equipment` endpoint."
             },
             "equipmentReference": {
               "type": "string"
@@ -14029,13 +14081,15 @@
               "type": "boolean"
             },
             "environmentalRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/environmental` endpoint."
             },
             "environmentalReference": {
               "type": "string"
             },
             "personRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/person` endpoint."
             },
             "personReference": {
               "type": "string"
@@ -14047,7 +14101,8 @@
               "type": "string"
             },
             "equipmentRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/equipment` endpoint."
             },
             "equipmentReference": {
               "type": "string"
@@ -14160,13 +14215,15 @@
               "type": "boolean"
             },
             "environmentalRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/environmental` endpoint."
             },
             "environmentalReference": {
               "type": "string"
             },
             "personRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/person` endpoint."
             },
             "personReference": {
               "type": "string"
@@ -14178,7 +14235,8 @@
               "type": "string"
             },
             "equipmentRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/equipment` endpoint."
             },
             "equipmentReference": {
               "type": "string"
@@ -14202,7 +14260,8 @@
               "type": "string"
             },
             "recordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `export/dataset/release-to-water` endpoint."
             },
             "recordReference": {
               "type": "string"
@@ -14255,7 +14314,8 @@
               "type": "string"
             },
             "recordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `export/dataset/vehicle-incident` endpoint."
             },
             "recordReference": {
               "type": "string"
@@ -14459,7 +14519,8 @@
               "type": "string"
             },
             "projectRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project` endpoint."
             },
             "projectReference": {
               "type": "string"
@@ -14499,7 +14560,8 @@
               "type": "string"
             },
             "recordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `export/dataset/waste-transfer` endpoint."
             },
             "recordReference": {
               "type": "string"
@@ -14877,7 +14939,8 @@
               "type": "string"
             },
             "environmentalRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/environmental` endpoint."
             },
             "environmentalReference": {
               "type": "string"
@@ -14904,7 +14967,8 @@
               "type": "string"
             },
             "wasteHandlerHolderRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/waste-handler` endpoint."
             },
             "wasteHandlerHolderReference": {
               "type": "string"
@@ -14973,7 +15037,8 @@
               "type": "string"
             },
             "wasteHandlerCollectorRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/waste-handler` endpoint."
             },
             "wasteHandlerCollectorReference": {
               "type": "string"
@@ -15170,7 +15235,8 @@
               "type": "string"
             },
             "projectRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project` endpoint."
             },
             "projectReference": {
               "type": "string"
@@ -15222,7 +15288,8 @@
               "type": "string"
             },
             "recordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `export/dataset/supplier-contractor` endpoint."
             },
             "recordReference": {
               "type": "string"
@@ -15270,7 +15337,8 @@
               "type": "string"
             },
             "recordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `export/dataset/supplier-contractor` endpoint."
             },
             "recordReference": {
               "type": "string"
@@ -15311,7 +15379,8 @@
               "type": "string"
             },
             "recordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `export/dataset/osha301` endpoint."
             },
             "recordReference": {
               "type": "string"
@@ -15431,13 +15500,15 @@
               "type": "string"
             },
             "incidentEventRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/incident-event` endpoint."
             },
             "incidentEventReference": {
               "type": "string"
             },
             "vehicleIncidentRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/vehicle-incident` endpoint."
             },
             "vehicleIncidentReference": {
               "type": "string"
@@ -15767,13 +15838,15 @@
               "format": "date"
             },
             "notificationOfProjectRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/notification-of-project` endpoint."
             },
             "notificationOfProjectReference": {
               "type": "string"
             },
             "supplierContractorRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/supplier-contractor` endpoint."
             },
             "supplierContractorReference": {
               "type": "string"
@@ -15873,7 +15946,8 @@
               "type": "string"
             },
             "projectRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project` endpoint."
             },
             "projectReference": {
               "type": "string"
@@ -15946,7 +16020,8 @@
               "type": "string"
             },
             "supplierContractorPrincipalRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/supplier-contractor` endpoint."
             },
             "supplierContractorPrincipalReference": {
               "type": "string"
@@ -16004,7 +16079,8 @@
               "type": "integer"
             },
             "supplierContractorAppointedRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/supplier-contractor` endpoint."
             },
             "supplierContractorAppointedReference": {
               "type": "string"
@@ -16144,7 +16220,8 @@
               "type": "string"
             },
             "equipmentRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/equipment` endpoint."
             },
             "equipmentReference": {
               "type": "string"
@@ -16292,7 +16369,8 @@
               "type": "string"
             },
             "equipmentRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/equipment` endpoint."
             },
             "equipmentReference": {
               "type": "string"
@@ -16462,7 +16540,8 @@
               "type": "string"
             },
             "equipmentRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/equipment` endpoint."
             },
             "equipmentReference": {
               "type": "string"
@@ -16483,7 +16562,8 @@
               "type": "string"
             },
             "personRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/person` endpoint."
             },
             "personReference": {
               "type": "string"
@@ -16610,7 +16690,8 @@
               "type": "array",
               "items": {
                 "type": "string"
-              }
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/incident-event` endpoint."
             },
             "incidentEventReferences": {
               "type": "array",
@@ -16622,7 +16703,8 @@
               "type": "array",
               "items": {
                 "type": "string"
-              }
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/vehicle-incident` endpoint."
             },
             "vehicleIncidentReferences": {
               "type": "array",
@@ -16675,7 +16757,8 @@
               "type": "boolean"
             },
             "activityRiskRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/activity-risk` endpoint."
             },
             "activityRiskReference": {
               "type": "string"
@@ -16684,7 +16767,8 @@
               "type": "boolean"
             },
             "courseRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/course` endpoint."
             },
             "courseReference": {
               "type": "string"
@@ -16781,7 +16865,8 @@
               "type": "string"
             },
             "equipmentRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/equipment` endpoint."
             },
             "equipmentReference": {
               "type": "string"
@@ -16805,7 +16890,8 @@
               "type": "string"
             },
             "supplierContractorRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/supplier-contractor` endpoint."
             },
             "supplierContractorReference": {
               "type": "string"
@@ -17033,13 +17119,15 @@
               "type": "string"
             },
             "incidentEventRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/incident-event` endpoint."
             },
             "incidentEventReference": {
               "type": "string"
             },
             "oshaEstablishmentRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/osha-establishment` endpoint."
             },
             "oshaEstablishmentReference": {
               "type": "string"
@@ -17048,7 +17136,8 @@
               "type": "string"
             },
             "personEmployeeRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/person` endpoint."
             },
             "personEmployeeReference": {
               "type": "string"
@@ -17175,7 +17264,8 @@
               "type": "string"
             },
             "personRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/person` endpoint."
             },
             "personReference": {
               "type": "string"
@@ -17291,7 +17381,8 @@
               "type": "string"
             },
             "oshaEstablishmentRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/osha-establishment` endpoint."
             },
             "oshaEstablishmentReference": {
               "type": "string"
@@ -17354,7 +17445,8 @@
               "type": "array",
               "items": {
                 "type": "string"
-              }
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/osha301` endpoint."
             },
             "osha301References": {
               "type": "array",
@@ -17454,7 +17546,8 @@
               "type": "string"
             },
             "equipmentRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/equipment` endpoint."
             },
             "equipmentReference": {
               "type": "string"
@@ -17481,7 +17574,8 @@
               "type": "string"
             },
             "supplierContractorRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/supplier-contractor` endpoint."
             },
             "supplierContractorReference": {
               "type": "string"
@@ -17631,7 +17725,8 @@
               "type": "string"
             },
             "personRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/person` endpoint."
             },
             "personReference": {
               "type": "string"
@@ -17689,7 +17784,8 @@
               "type": "string"
             },
             "recordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `export/dataset/job-hazard-analysis` endpoint."
             },
             "recordReference": {
               "type": "string"
@@ -17751,7 +17847,8 @@
               "type": "string"
             },
             "recordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `export/dataset/job-hazard-analysis` endpoint."
             },
             "recordReference": {
               "type": "string"
@@ -17792,7 +17889,8 @@
               "type": "string"
             },
             "recordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the respective endpoint that can be found in `reviewModuleEndpoint` field which is part of this extract."
             },
             "reviewOrgUnitName": {
               "type": "string"
@@ -17853,7 +17951,8 @@
               "type": "string"
             },
             "recordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `export/dataset/incident-event` endpoint."
             },
             "recordReference": {
               "type": "string"
@@ -18016,7 +18115,8 @@
               "type": "string"
             },
             "personRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/person` endpoint."
             },
             "personReference": {
               "type": "string"
@@ -18028,7 +18128,8 @@
               "type": "string"
             },
             "personOrgUnitRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/org-unit` endpoint."
             },
             "personOrgUnitName": {
               "type": "string"
@@ -18047,7 +18148,8 @@
               "type": "string"
             },
             "tnaTemplateRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/tna` endpoint."
             },
             "tnaTemplateReference": {
               "type": "string"
@@ -18073,7 +18175,8 @@
               "type": "array",
               "items": {
                 "type": "string"
-              }
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/course` endpoint."
             },
             "courseReferences": {
               "type": "array",
@@ -18173,13 +18276,15 @@
               "type": "string"
             },
             "projectRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project` endpoint."
             },
             "projectReference": {
               "type": "string"
             },
             "projectRiskRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project-risk` endpoint."
             },
             "projectRiskReference": {
               "type": "string"
@@ -18320,13 +18425,15 @@
               "type": "string"
             },
             "projectRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project` endpoint."
             },
             "projectReference": {
               "type": "string"
             },
             "projectRiskRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/project-risk` endpoint."
             },
             "projectRiskReference": {
               "type": "string"
@@ -18335,7 +18442,8 @@
               "type": "string"
             },
             "personAssessorRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/person` endpoint."
             },
             "personAssessorReference": {
               "type": "string"
@@ -18351,7 +18459,8 @@
               "format": "date"
             },
             "personUserRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/person` endpoint."
             },
             "personUserReference": {
               "type": "string"
@@ -18522,7 +18631,8 @@
               "format": "date"
             },
             "personRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/person` endpoint."
             },
             "personReference": {
               "type": "string"
@@ -18591,7 +18701,8 @@
               "type": "integer"
             },
             "equipmentRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/equipment` endpoint."
             },
             "equipmentReference": {
               "type": "string"
@@ -19146,25 +19257,29 @@
               "type": "boolean"
             },
             "personRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/person` endpoint."
             },
             "personReference": {
               "type": "string"
             },
             "orgUnitRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/org-unit` endpoint."
             },
             "orgUnitName": {
               "type": "string"
             },
             "orgUnitMaskedRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/org-unit` endpoint."
             },
             "orgUnitMaskedName": {
               "type": "string"
             },
             "userManagerRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/user` endpoint."
             },
             "userManagerFullName": {
               "type": "string"
@@ -19253,7 +19368,8 @@
               "type": "string"
             },
             "recordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the respective endpoint that can be found in `attachmentModuleEndpoint` field which is part of this extract."
             },
             "attachmentModule": {
               "type": "string"
@@ -19274,7 +19390,8 @@
               "type": "string"
             },
             "actionRecordId": {
-              "type": "string"
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/action` endpoint."
             },
             "connectedRecordsIds": {
               "type": "array",
