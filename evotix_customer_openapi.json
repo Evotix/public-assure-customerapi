@@ -9331,6 +9331,15 @@
             "vehicleIncidentReference": {
               "type": "string"
             },
+            "oshaEstablishmentRecordId": {
+              "type": "string"
+            },
+            "oshaEstablishmentReference": {
+              "type": "string"
+            },
+            "oshaEstablishmentName": {
+              "type": "string"
+            },
             "incidentType": {
               "type": "string"
             },
@@ -11072,6 +11081,12 @@
             "equipmentType": {
               "type": "string"
             },
+            "equipmentCategory": {
+              "type": "string"
+            },
+            "equipmentSubCategory": {
+              "type": "string"
+            },
             "custom": {
               "type": "object"
             }
@@ -11905,6 +11920,9 @@
             "actionScheduleEndDate": {
               "type": "string",
               "format": "date"
+            },
+            "actionCreateUserTimezone": {
+              "type": "string"
             }
           }
         }
@@ -17029,6 +17047,12 @@
             "oshaEstablishmentName": {
               "type": "string"
             },
+            "personEmployeeRecordId": {
+              "type": "string"
+            },
+            "personEmployeeReference": {
+              "type": "string"
+            },
             "osha301EmployeeFullName": {
               "type": "string"
             },
@@ -17056,6 +17080,9 @@
               "format": "date"
             },
             "osha301EmployeeSex": {
+              "type": "string"
+            },
+            "osha301EmployeeTypeOfPerson": {
               "type": "string"
             },
             "osha301PhysicianName": {
@@ -17088,6 +17115,21 @@
             "osha301DateOfInjury": {
               "type": "string",
               "format": "date"
+            },
+            "osha301WasTreatmentGiven": {
+              "type": "boolean"
+            },
+            "osha301TreatmentGiven": {
+              "type": "string"
+            },
+            "osha301DoctorComments": {
+              "type": "string"
+            },
+            "osha301Reportable": {
+              "type": "boolean"
+            },
+            "osha301Recordable": {
+              "type": "boolean"
             },
             "osha301OccurredLocation": {
               "type": "string"
