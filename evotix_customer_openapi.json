@@ -21517,6 +21517,18 @@
             "minLength": 1,
             "maxLength": 255
           },
+          "equipmentCategory": {
+            "description": "Specifies the equipment category for the equipment register record. This value must match a valid entry in the picklist data dictionary for this field, in either the customer\u2019s default language or the base system language (English-UK). The picklist entry must have a parent value that matches the value provided in the equipmentType field. If equipmentCategory is provided, the record must also have an equipmentType; otherwise, the category will be considered invalid.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "equipmentSubCategory": {
+            "description": "Specifies the equipment sub category for the equipment register record. This value must match a valid entry in the picklist data dictionary for this field, in either the customer\u2019s default language or the base system language (English-UK). The picklist entry must have a parent value that matches the value provided in the equipmentCategory field. If equipmentSubCategory is provided the record must also have an equipmentCategory; otherwise, the category will be considered invalid.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
           "isCEMarked": {
             "description": "Specifies if the equipment is CE marked. If this non nullable field is set to null then the value will default to 'false'.",
             "type": "boolean"
@@ -21618,6 +21630,18 @@
           },
           "equipmentType": {
             "description": "The equipment register record's equipment type. This value must match a value defined in the picklist data dictionary for this field in customer's default language or base system language (English-UK). If this field is omitted or null then there will be no equipment type for this equipment register record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "equipmentCategory": {
+            "description": "Specifies the equipment category for the equipment register record. This value must match a valid entry in the picklist data dictionary for this field, in either the customer\u2019s default language or the base system language (English-UK). The picklist entry must have a parent value that matches the value provided in the equipmentType field. If equipmentCategory is provided, equipmentType must also be provided; otherwise, the category will be considered invalid. If this field is omitted or null, no equipment category will be assigned to the record.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "equipmentSubCategory": {
+            "description": "Specifies the equipment sub category for the equipment register record. This value must match a valid entry in the picklist data dictionary for this field, in either the customer\u2019s default language or the base system language (English-UK). The picklist entry must have a parent value that matches the value provided in the equipmentCategory field. If equipmentSubCategory is provided, equipmentCategory must also be provided; otherwise, the category will be considered invalid. If this field is omitted or null, no equipment sub category will be assigned to the record.",
             "type": "string",
             "minLength": 1,
             "maxLength": 255
