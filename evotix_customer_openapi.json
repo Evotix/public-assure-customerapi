@@ -6966,6 +6966,140 @@
         ]
       }
     },
+    "/export/dataset/tna-template": {
+      "get": {
+        "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetTnaTemplateGETResponse"
+                }
+              },
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/tna-template/iq": {
+      "get": {
+        "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetIqGETResponse"
+                }
+              },
+              "application/jsonlines": {},
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/tna-template/iq-additional-fields": {
+      "get": {
+        "description": "Retrieve the most recent IQ Additional fields for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of the IQ Additional fields export. Contents are JSON-lines or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetIqAdditionalFieldsGETResponse"
+                }
+              },
+              "application/jsonlines": {},
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/export/dataset/manual-handling": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
@@ -7103,6 +7237,11 @@
     "/export/dataset/dse": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -7142,6 +7281,11 @@
     "/export/dataset/dse/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -7227,6 +7371,11 @@
     "/export/dataset/noise": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -7266,6 +7415,11 @@
     "/export/dataset/noise/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -7351,6 +7505,11 @@
     "/export/dataset/ghs-sds": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -7390,6 +7549,11 @@
     "/export/dataset/ghs-sds/iq": {
       "get": {
         "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
@@ -7472,9 +7636,684 @@
         ]
       }
     },
+    "/export/dataset/policy": {
+      "get": {
+        "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetPolicyGETResponse"
+                }
+              },
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/policy/iq": {
+      "get": {
+        "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetIqGETResponse"
+                }
+              },
+              "application/jsonlines": {},
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/policy/iq-additional-fields": {
+      "get": {
+        "description": "Retrieve the most recent IQ Additional fields for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of the IQ Additional fields export. Contents are JSON-lines or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetIqAdditionalFieldsGETResponse"
+                }
+              },
+              "application/jsonlines": {},
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/osha-establishment": {
+      "get": {
+        "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetOSHAEstablishmentGETResponse"
+                }
+              },
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/osha-establishment/iq": {
+      "get": {
+        "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetIqGETResponse"
+                }
+              },
+              "application/jsonlines": {},
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/osha-establishment/iq-additional-fields": {
+      "get": {
+        "description": "Retrieve the most recent IQ Additional fields for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of the IQ Additional fields export. Contents are JSON-lines or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetIqAdditionalFieldsGETResponse"
+                }
+              },
+              "application/jsonlines": {},
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/employment": {
+      "get": {
+        "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetEmploymentGETResponse"
+                }
+              },
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/employment/iq": {
+      "get": {
+        "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetIqGETResponse"
+                }
+              },
+              "application/jsonlines": {},
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/employment/iq-additional-fields": {
+      "get": {
+        "description": "Retrieve the most recent IQ Additional fields for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of the IQ Additional fields export. Contents are JSON-lines or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetIqAdditionalFieldsGETResponse"
+                }
+              },
+              "application/jsonlines": {},
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/health": {
+      "get": {
+        "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetHealthGETResponse"
+                }
+              },
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/health/iq": {
+      "get": {
+        "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetIqGETResponse"
+                }
+              },
+              "application/jsonlines": {},
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/health/iq-additional-fields": {
+      "get": {
+        "description": "Retrieve the most recent IQ Additional fields for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of the IQ Additional fields export. Contents are JSON-lines or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetIqAdditionalFieldsGETResponse"
+                }
+              },
+              "application/jsonlines": {},
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/riddor": {
+      "get": {
+        "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetRiddorGETResponse"
+                }
+              },
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/riddor/iq": {
+      "get": {
+        "description": "Retrieve the most recent IQ answers for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of the IQ answers export. Contents are JSON-lines or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetIqGETResponse"
+                }
+              },
+              "application/jsonlines": {},
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/export/dataset/riddor/iq-additional-fields": {
+      "get": {
+        "description": "Retrieve the most recent IQ Additional fields for this module. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response - Successful retrieval of the IQ Additional fields export. Contents are JSON-lines or CSV format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exportDatasetIqAdditionalFieldsGETResponse"
+                }
+              },
+              "application/jsonlines": {},
+              "text/csv": {},
+              "application/csv": {}
+            }
+          },
+          "400": {
+            "description": "400 response - Invalid request parameters or content, check required path/query parameters and/or content has been provided. See response body for more details."
+          },
+          "401": {
+            "description": "401 response - Authentication failed. Ensure a valid API key string has been provided in the 'x-api-key' HTTP header."
+          },
+          "404": {
+            "description": "404 response - There is no dataset present. Ensure this dataset is enabled to be generated via Assure configuration. Note that datasets are only generated once in the configured period (so you may need to wait for the end of the period for the dataset to be generated for the first time)."
+          },
+          "429": {
+            "description": "429 response - API request was rejected due to API rate limiting."
+          },
+          "500": {
+            "description": "500 response - An internal error prevented the request from completing. See response body for more details."
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
     "/export/dataset/user": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -7514,6 +8353,11 @@
     "/export/dataset/attachment": {
       "get": {
         "description": "Retrieve the most recent records for this module in the requested format. This API is only intended to be used to extract the dataset export when it has been refreshed on a daily or hourly-basis. It is NOT intended to be used 'on demand' to retrieve the dataset whenever the data is to be visualised/processed. Note that exports are only available in the preconfigured format: JSON-lines, JSON (deprecated) or CSV.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/x-extract-schedule"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response - Successful retrieval of module records. Contents are JSON-lines, JSON (deprecated) or CSV format.",
@@ -8613,6 +9457,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -9208,6 +10065,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -9362,6 +10232,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -9895,6 +10778,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -10009,6 +10905,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -10217,6 +11126,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -10390,6 +11312,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -10549,6 +11484,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -10783,6 +11731,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -10915,6 +11876,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -11100,6 +12074,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -11289,6 +12276,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -11423,6 +12423,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -11562,6 +12575,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -11781,6 +12807,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -12083,6 +13122,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -12217,6 +13269,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -12325,6 +13390,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -12541,6 +13619,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -12660,6 +13751,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -12856,6 +13960,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -13234,6 +14351,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -13365,6 +14495,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -13545,6 +14688,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -13817,6 +14973,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -14021,6 +15190,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -14155,6 +15337,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -14288,6 +15483,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -14606,6 +15814,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -14789,6 +16010,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -14917,6 +16151,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -15025,6 +16272,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -15322,6 +16582,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -15586,6 +16859,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -15918,6 +17204,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -16032,6 +17331,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -16307,6 +17619,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -16455,6 +17780,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -16627,6 +17965,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -16773,6 +18124,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -16951,6 +18315,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -17205,6 +18582,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -17468,6 +18858,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -17632,6 +19035,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -17805,6 +19221,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -18202,6 +19631,19 @@
             "statusRating": {
               "type": "string"
             },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "location": {
               "type": "string"
             },
@@ -18263,6 +19705,126 @@
               "type": "number"
             },
             "tnaStatus": {
+              "type": "string"
+            },
+            "courseRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/course` endpoint."
+            },
+            "courseReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "custom": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "exportDatasetTnaTemplateGETResponse": {
+        "type": "array",
+        "description": "To ensure forwards compatibility responses do NOT set additionalProperties=false and do NOT use required fields",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "createdAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "modifiedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "createdByUser": {
+              "type": "string"
+            },
+            "modifiedByUser": {
+              "type": "string"
+            },
+            "isConfidential": {
+              "type": "boolean"
+            },
+            "isArchive": {
+              "type": "boolean"
+            },
+            "entityReference": {
+              "type": "string"
+            },
+            "orgUnitName": {
+              "type": "string"
+            },
+            "orgUnitId": {
+              "type": "string"
+            },
+            "orgUnitExternalId": {
+              "type": "string"
+            },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
+            "iqTemplateName": {
+              "type": "string"
+            },
+            "iqTemplateMajorVersion": {
+              "type": "integer"
+            },
+            "iqQuestionnaireStartedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "iqQuestionnaireCompletedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
+            },
+            "statusRating": {
+              "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "location": {
+              "type": "string"
+            },
+            "locality": {
+              "type": "string"
+            },
+            "tnaTemplateQualification": {
               "type": "string"
             },
             "courseRecordIds": {
@@ -18362,6 +19924,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -18511,6 +20086,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -18685,6 +20273,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -18930,6 +20531,19 @@
             },
             "statusRating": {
               "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "location": {
               "type": "string"
@@ -19310,6 +20924,781 @@
               "type": "string"
             },
             "ghsSdsOtherInformation": {
+              "type": "string"
+            },
+            "custom": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "exportDatasetPolicyGETResponse": {
+        "type": "array",
+        "description": "To ensure forwards compatibility responses do NOT set additionalProperties=false and do NOT use required fields",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "policyEntityReference": {
+              "type": "string"
+            },
+            "policyOrgUnitName": {
+              "type": "string"
+            },
+            "policyOrgUnitId": {
+              "type": "string"
+            },
+            "policyOrgUnitExternalId": {
+              "type": "string"
+            },
+            "policyTitle": {
+              "type": "string"
+            },
+            "policyDocumentNumber": {
+              "type": "string"
+            },
+            "policyRevisionNumber": {
+              "type": "string"
+            },
+            "policyIssueDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "policyIssuedBy": {
+              "type": "string"
+            },
+            "policyPreparedBy": {
+              "type": "string"
+            },
+            "policyDescription": {
+              "type": "string"
+            },
+            "policyManualNumber": {
+              "type": "string"
+            },
+            "policyDetails": {
+              "type": "string"
+            },
+            "policyCategory_id": {
+              "type": "string"
+            },
+            "policyDateDocumentCreated": {
+              "type": "string",
+              "format": "date"
+            },
+            "custom": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "exportDatasetOSHAEstablishmentGETResponse": {
+        "type": "array",
+        "description": "To ensure forwards compatibility responses do NOT set additionalProperties=false and do NOT use required fields",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "createdAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "modifiedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "createdByUser": {
+              "type": "string"
+            },
+            "modifiedByUser": {
+              "type": "string"
+            },
+            "isConfidential": {
+              "type": "boolean"
+            },
+            "isArchive": {
+              "type": "boolean"
+            },
+            "entityReference": {
+              "type": "string"
+            },
+            "orgUnitName": {
+              "type": "string"
+            },
+            "orgUnitId": {
+              "type": "string"
+            },
+            "orgUnitExternalId": {
+              "type": "string"
+            },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
+            "iqTemplateName": {
+              "type": "string"
+            },
+            "iqTemplateMajorVersion": {
+              "type": "integer"
+            },
+            "iqQuestionnaireStartedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "iqQuestionnaireCompletedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
+            },
+            "statusRating": {
+              "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Each item from this field can be linked to the `id` field of the `/export/dataset/policy` endpoint."
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "location": {
+              "type": "string"
+            },
+            "locality": {
+              "type": "string"
+            },
+            "oshaEstablishmentName": {
+              "type": "string"
+            },
+            "oshaEstablishmentCompanyName": {
+              "type": "string"
+            },
+            "oshaEstablishmentStreet": {
+              "type": "string"
+            },
+            "oshaEstablishmentCity": {
+              "type": "string"
+            },
+            "oshaEstablishmentState": {
+              "type": "string"
+            },
+            "oshaEstablishmentZip": {
+              "type": "string"
+            },
+            "oshaEstablishmentNaicsCode": {
+              "type": "string"
+            },
+            "oshaEstablishmentSicCode": {
+              "type": "string"
+            },
+            "oshaEstablishmentIndustryDescription": {
+              "type": "string"
+            },
+            "oshaEstablishmentSize": {
+              "type": "string"
+            },
+            "oshaEstablishmentType": {
+              "type": "string"
+            },
+            "oshaEmployerIdentificationNumber": {
+              "type": "string"
+            },
+            "personRecordId": {
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/person` endpoint."
+            },
+            "personReference": {
+              "type": "string"
+            },
+            "personFullName": {
+              "type": "string"
+            },
+            "personJobTitle": {
+              "type": "string"
+            },
+            "personTelephone": {
+              "type": "string"
+            },
+            "custom": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "exportDatasetEmploymentGETResponse": {
+        "type": "array",
+        "description": "To ensure forwards compatibility responses do NOT set additionalProperties=false and do NOT use required fields",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "createdAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "modifiedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "createdByUser": {
+              "type": "string"
+            },
+            "modifiedByUser": {
+              "type": "string"
+            },
+            "isConfidential": {
+              "type": "boolean"
+            },
+            "isArchive": {
+              "type": "boolean"
+            },
+            "entityReference": {
+              "type": "string"
+            },
+            "orgUnitName": {
+              "type": "string"
+            },
+            "orgUnitId": {
+              "type": "string"
+            },
+            "orgUnitExternalId": {
+              "type": "string"
+            },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
+            "iqTemplateName": {
+              "type": "string"
+            },
+            "iqTemplateMajorVersion": {
+              "type": "integer"
+            },
+            "iqQuestionnaireStartedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "iqQuestionnaireCompletedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
+            },
+            "statusRating": {
+              "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "location": {
+              "type": "string"
+            },
+            "locality": {
+              "type": "string"
+            },
+            "employmentDateFrom": {
+              "type": "string",
+              "format": "date"
+            },
+            "employmentDateTo": {
+              "type": "string",
+              "format": "date"
+            },
+            "employmentEmpCode1": {
+              "type": "string"
+            },
+            "employmentEmpCode2": {
+              "type": "string"
+            },
+            "employmentEmpCode3": {
+              "type": "string"
+            },
+            "employmentEmpCode4": {
+              "type": "string"
+            },
+            "employmentComments": {
+              "type": "string"
+            },
+            "personRecordId": {
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/person` endpoint."
+            },
+            "personReference": {
+              "type": "string"
+            },
+            "custom": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "exportDatasetHealthGETResponse": {
+        "type": "array",
+        "description": "To ensure forwards compatibility responses do NOT set additionalProperties=false and do NOT use required fields",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "createdAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "modifiedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "createdByUser": {
+              "type": "string"
+            },
+            "modifiedByUser": {
+              "type": "string"
+            },
+            "isConfidential": {
+              "type": "boolean"
+            },
+            "isArchive": {
+              "type": "boolean"
+            },
+            "entityReference": {
+              "type": "string"
+            },
+            "orgUnitName": {
+              "type": "string"
+            },
+            "orgUnitId": {
+              "type": "string"
+            },
+            "orgUnitExternalId": {
+              "type": "string"
+            },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
+            "iqTemplateName": {
+              "type": "string"
+            },
+            "iqTemplateMajorVersion": {
+              "type": "integer"
+            },
+            "iqQuestionnaireStartedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "iqQuestionnaireCompletedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
+            },
+            "statusRating": {
+              "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "location": {
+              "type": "string"
+            },
+            "locality": {
+              "type": "string"
+            },
+            "healthSurveyType": {
+              "type": "string"
+            },
+            "healthSurveyDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "healthSurveyedBy": {
+              "type": "string"
+            },
+            "healthSurveyReason": {
+              "type": "string"
+            },
+            "healthReportReference": {
+              "type": "string"
+            },
+            "healthComments": {
+              "type": "string"
+            },
+            "personRecordId": {
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/person` endpoint."
+            },
+            "personReference": {
+              "type": "string"
+            },
+            "personForename": {
+              "type": "string"
+            },
+            "personSurname": {
+              "type": "string"
+            },
+            "healthSurveyCategory": {
+              "type": "string"
+            },
+            "healthNextSurveyDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "custom": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "exportDatasetRiddorGETResponse": {
+        "type": "array",
+        "description": "To ensure forwards compatibility responses do NOT set additionalProperties=false and do NOT use required fields",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "createdAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "modifiedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "createdByUser": {
+              "type": "string"
+            },
+            "modifiedByUser": {
+              "type": "string"
+            },
+            "isConfidential": {
+              "type": "boolean"
+            },
+            "isArchive": {
+              "type": "boolean"
+            },
+            "entityReference": {
+              "type": "string"
+            },
+            "orgUnitName": {
+              "type": "string"
+            },
+            "orgUnitId": {
+              "type": "string"
+            },
+            "orgUnitExternalId": {
+              "type": "string"
+            },
+            "iqQuestionnaireId": {
+              "type": "string"
+            },
+            "iqTemplateName": {
+              "type": "string"
+            },
+            "iqTemplateMajorVersion": {
+              "type": "integer"
+            },
+            "iqQuestionnaireStartedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "iqQuestionnaireCompletedAtUTC": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "iqIsScoreDisplayed": {
+              "type": "boolean"
+            },
+            "iqScore": {
+              "type": "number"
+            },
+            "iqSafeObservations": {
+              "type": "integer"
+            },
+            "iqUnsafeObservations": {
+              "type": "integer"
+            },
+            "iqAuditPercentageScore": {
+              "type": "number"
+            },
+            "iqAuditPercentageReviewScore": {
+              "type": "number"
+            },
+            "statusRating": {
+              "type": "string"
+            },
+            "policyRecordIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "policyReferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "location": {
+              "type": "string"
+            },
+            "locality": {
+              "type": "string"
+            },
+            "incidentEventRecordId": {
+              "type": "string",
+              "description": "This field can be linked to the `id` field of the `/export/dataset/incident-event` endpoint."
+            },
+            "incidentEventReference": {
+              "type": "string"
+            },
+            "riddorRevision": {
+              "type": "string"
+            },
+            "riddorHseReference": {
+              "type": "string"
+            },
+            "riddorNotifierTitle": {
+              "type": "string"
+            },
+            "riddorNotifierForename": {
+              "type": "string"
+            },
+            "riddorNotifierSurname": {
+              "type": "string"
+            },
+            "riddorNotifierJobTitle": {
+              "type": "string"
+            },
+            "riddorNotifierPhoneNumber": {
+              "type": "string"
+            },
+            "riddorNotifierOrgName": {
+              "type": "string"
+            },
+            "riddorNotifierAddress1": {
+              "type": "string"
+            },
+            "riddorNotifierAddress2": {
+              "type": "string"
+            },
+            "riddorNotifierAddress3": {
+              "type": "string"
+            },
+            "riddorNotifierAddressTown": {
+              "type": "string"
+            },
+            "riddorNotifierAddressCounty": {
+              "type": "string"
+            },
+            "riddorNotifierAddressPostcode": {
+              "type": "string"
+            },
+            "riddorNotifierAddressFaxNumber": {
+              "type": "string"
+            },
+            "riddorNotifierEmailAddress": {
+              "type": "string"
+            },
+            "riddorIncidentHappenNotifierAddress": {
+              "type": "boolean"
+            },
+            "riddorIncidentLocation": {
+              "type": "string"
+            },
+            "riddorIncidentOrgName": {
+              "type": "string"
+            },
+            "riddorIncidentAddress1": {
+              "type": "string"
+            },
+            "riddorIncidentAddress2": {
+              "type": "string"
+            },
+            "riddorIncidentAddress3": {
+              "type": "string"
+            },
+            "riddorIncidentAddressTown": {
+              "type": "string"
+            },
+            "riddorIncidentAddressCounty": {
+              "type": "string"
+            },
+            "riddorIncidentAddressPostcode": {
+              "type": "string"
+            },
+            "riddorIncidentLocationDescription": {
+              "type": "string"
+            },
+            "riddorIncidentOccurredAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "riddorIncidentCountry": {
+              "type": "string"
+            },
+            "riddorIncidentGeoArea": {
+              "type": "string"
+            },
+            "riddorAuthority": {
+              "type": "string"
+            },
+            "riddorIncidentDepartment": {
+              "type": "string"
+            },
+            "riddorMainIndustry": {
+              "type": "string"
+            },
+            "riddorMainActivity": {
+              "type": "string"
+            },
+            "riddorSubActivity": {
+              "type": "string"
+            },
+            "riddorIncidentKind": {
+              "type": "string"
+            },
+            "riddorFallHeight": {
+              "type": "integer"
+            },
+            "riddorWorkProcess": {
+              "type": "string"
+            },
+            "riddorMainFactor": {
+              "type": "string"
+            },
+            "riddorIncidentDescription": {
+              "type": "string"
+            },
+            "riddorInjuredPersonTitle": {
+              "type": "string"
+            },
+            "riddorInjuredPersonForename": {
+              "type": "string"
+            },
+            "riddorInjuredPersonSurname": {
+              "type": "string"
+            },
+            "riddorInjuredPersonAddress1": {
+              "type": "string"
+            },
+            "riddorInjuredPersonAddress2": {
+              "type": "string"
+            },
+            "riddorInjuredPersonAddress3": {
+              "type": "string"
+            },
+            "riddorInjuredPersonTown": {
+              "type": "string"
+            },
+            "riddorInjuredPersonCounty": {
+              "type": "string"
+            },
+            "riddorInjuredPersonPostCode": {
+              "type": "string"
+            },
+            "riddorInjuredPersonPhoneNumber": {
+              "type": "string"
+            },
+            "riddorInjuredPersonGender": {
+              "type": "string"
+            },
+            "riddorInjuredPersonAge": {
+              "type": "integer"
+            },
+            "riddorInjuredPersonJobTitle": {
+              "type": "string"
+            },
+            "riddorEmploymentStatus": {
+              "type": "string"
+            },
+            "riddorInjuredPersonDescription": {
+              "type": "string"
+            },
+            "riddorInjurySeverity": {
+              "type": "string"
+            },
+            "riddorInjurySustained": {
+              "type": "string"
+            },
+            "riddorBodyPart": {
               "type": "string"
             },
             "custom": {
